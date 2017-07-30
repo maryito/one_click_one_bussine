@@ -1,0 +1,19 @@
+<template name="navegacion">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{pathFor '/'}}">Inventario Inteligente</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{pathFor '/'}}">Home</a></li>
+      <li><a href="{{pathFor '/empresa'}}">Empresa</a></li>
+      <li><a href="{{pathFor '/proveedor/'}}">Proveedor</a></li>
+      <li><a href="{{pathFor '/fabricante'}}">Fabricante</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{{pathFor '/usuario'}}"><span class="glyphicon glyphicon-user"></span> Usuario</a></li>
+      <li><a href="#"> {{> loginButtons}} </a></li>
+    </ul>
+  </div>
+</nav>
+</template>

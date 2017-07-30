@@ -1,0 +1,14 @@
+<template name="proveedor">
+  <h2>Modulo de proveedor</h2>
+  <ul>
+    <li>
+      <form class="proveedor-producto-add">
+        <input type="text" name="nombre" placeholder="nombre" required>
+        <input type="submit" name="submit" value="Agregar nuevo producto">
+      </form>
+    </li>
+    {{#each productos}}
+      <li> {{nombre}} </li>
+    {{/each}}
+  </ul>
+</template>
