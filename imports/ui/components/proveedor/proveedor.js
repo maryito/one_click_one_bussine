@@ -1,4 +1,5 @@
 import { Productos } from '/imports/api/productos/productos.js';
+import { ProdSchemas } from '/imports/api/productos/schemas.js';
 import { Meteor } from 'meteor/meteor';
 import './proveedor.html';
 
@@ -10,6 +11,9 @@ Template.proveedor.helpers({
   productos() {
     return Productos.find({});
   },
+  Schemas() {
+    return ProdSchemas;
+  }
 });
 
 Template.proveedor.events({
