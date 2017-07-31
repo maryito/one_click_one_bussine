@@ -11,4 +11,20 @@
       <li> {{nombre}} </li>
     {{/each}}
   </ul>
+
+  <div class="rom"> 
+    <dic class="col-md-12">
+      <h1> Ejemplo Formulario Automatico con validación </h1>
+      <div class="col-md-4">
+          <h1> Ejemplo normal no hace nada  </h1>
+          {{> quickForm schema=Schemas id="insertBookForm" type="normal"}}
+      </div> 
+      <div class="col-md-4">
+        <h1> Ejemplo con metodos insert de producto</h1>
+          {{> quickForm schema=Schemas id="FromAddProducto" type="method" meteormethod="productos.add"}}
+      </div>
+      <div class="col-md-4"></div>
+    </dic>
+  
+  </div>
 </template>
