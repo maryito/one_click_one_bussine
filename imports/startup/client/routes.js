@@ -22,6 +22,13 @@ FlowRouter.route('/proveedor', {
     BlazeLayout.render('App_body', { main: 'proveedor' });
   },
 });
+
+FlowRouter.route('/fabricante', {
+  name: 'App.fabricante',
+  action() {
+    BlazeLayout.render('App_body', { main: 'fabricante' });
+  },
+});
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
