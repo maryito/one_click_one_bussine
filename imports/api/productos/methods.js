@@ -10,7 +10,7 @@ Meteor.methods({
     check(nombre, String);
 
     return Productos.insert({
-      nombre,
+      nombre, 
       createdAt: new Date(),
     });
   },
