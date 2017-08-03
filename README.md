@@ -29,7 +29,7 @@ git push
 ### cambiar de rama
 ```git checkout nombre_de_la_rama```
 ### Eliminar una rama 
-```git checkout -d nombre_de_la_rama```
+```git branch -d nombre_de_la_rama```
 
 [x]*Como ejecutar la web del fabricante **proximamente***
 Se Cambiaría a la rama fabricante
@@ -39,7 +39,7 @@ meteor --port 4500
 ```
 
 [x]*Como ejecutar la web del proveedor **proximamente***
-Se Cambiaría a la rama fabricante
+Se Cambiaría a la rama proveedor
 ``` 
 git checkout proveedor 
 meteor --port 4000

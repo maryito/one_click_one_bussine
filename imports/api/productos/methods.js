@@ -10,12 +10,16 @@ Meteor.methods({
     check(nombre, String);
 
     return Productos.insert({
-      nombre, 
+      nombre,
       createdAt: new Date(),
     });
   },
   'productos.add'(form) {
-    check(form.nombre, String);
+    const data = form;
+    console.log(form);
+    // ProdSchemas.addValidator(form);
+    check(data, ProdSchemas);
+    // check(form.nombre, String);
     // console.log(from);
     const nombre = form.nombre;
     return Productos.insert({
