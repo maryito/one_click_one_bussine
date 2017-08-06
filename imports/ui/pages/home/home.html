@@ -1,15 +1,20 @@
 <template name="App_home">
   <div class="row">
     <div class="col-md-12">
-      <h1>Bienvenido al portal Portal</h1>
+      <div class="jumbotron col-md-12 col-sm-12 col-xs-12 col-lg-12" align="center">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ul class="nav navbar-nav navbar-right login">
+              <li><a href="{{pathFor '/usuario'}}"><span class="glyphicon glyphicon-user"></span> Usuario</a></li>
+              <li><a href="#"> {{> loginButtons}} </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo">
+            <img src="/img/logo.jpg" alt="ONE CLICK ONE BUSINESS">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <hr> 
-  {{> demo }}
-  <hr> 
-  {{> proveedor}}
-  <hr> 
-  {{> fabricante}}
 
 </template>
