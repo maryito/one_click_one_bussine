@@ -24,8 +24,24 @@
     float: left;
 }
 
-.div-iconos > div > h4{
+.div-iconos > div > a > h4{
+    color: black;
     font-family: 'Saira', sans-serif;
+}
+
+.icon {
+    -webkit-transition: transform 2s;
+    -moz-transition: transform 2s;
+    -o-transition: transform 2s;
+    -ms-transition: transform 2s;
+    transition:     transform 1s ease-in-out;
+}
+
+.icon:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 @-webkit-keyframes slide-in{
