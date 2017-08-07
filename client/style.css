@@ -47,4 +47,7 @@
 		animation: slide-in 2s;
     }
 
+    .item > img{
+        width: 45em;
+    }
 
