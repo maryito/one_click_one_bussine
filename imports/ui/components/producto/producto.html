@@ -1,0 +1,127 @@
+<template name="producto">
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <h1>Modulo de producto</h1>
+      <!-- {{> menu }} -->
+      <hr>
+      <br>
+      <!-- <div class="col-md-4">
+        <h3>Formulario Agregar Producto</h3>
+        {{> quickForm buttonContent="Agregar" schema=Schemas type="method" meteormethod="productos.agregar" id="ProductoAgregar"}}
+      </div> -->
+      <div class="coll-md-4">
+        <div class="col-md-12">
+          <div>
+            <h3>Busqueda</h3>
+            <form class="form-producto">
+              <input type="text" name="producto" data-id="producto" placeholder="Producto">
+              <input type="number" name="cantidad" data-id="cantidad" placeholder="Cantidad">
+              <button class="btn btn-success" id="buscar">Buscar </button>
+
+            </form>
+          </div>
+        </div>
+        {{#if recomendado}}
+        <div class="col-md-12">
+          <div class="col-md-4">
+            <h2>RECOMENDADOS</h2>
+            <!-- {{#each Recomendado}}
+            {{/each}} -->
+          </div>
+          <!-- <div class="col-md-4">
+            <h2>ALTERNATIVA #2</h2>
+          </div>
+          <!-- Validar la cantida de recomendado y desabilitar en caso de no cumplir  -->
+          <div class="col-md-4">
+            <h2>ALTERNATIVA #3</h2>
+          </div> -->
+        </div>
+        {{/if}}
+        <h3>Listado de productos.</h3>
+
+        {{#each productos}}
+        <div class="producto col-xs-4 col-lg-4">
+          <div class="thumbnail">
+
+            <div class="caption">
+              <h4> {{producto.nombre}} </h4>
+              <p>
+                <!-- {{ producto.proveedor }} -->
+                <b>Cantidad:</b> {{ producto.cantidad }}
+                <b>Proveedor:</b> {{ producto.proveedor }}
+                <b>Marca:</b> {{ producto.marca }}
+                <hr>
+                <b>Tiempo de entrega:</b> {{ producto.tiempo }} Días
+                <!-- logica de cuando singulares y plurales  -->
+              </p>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p class="lead">$ {{ producto.precio }}</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
+                  <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {{/each}}
+      </div>
+
+      <div class="col-md-4">
+        <div class="modal fade" id="ActualizarProducto" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content center">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"> Actualización de Productos</h4>
+              </div>
+              <div class="modal-body center">
+                {{> quickForm buttonContent="Agregar" schema=Schemas type="method" meteormethod="productos.actualizar" id="ProductoActualizar"}}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <br>
+  <br>
+</template>
+
+<template name="menu">
+  <div class="dropdown">
+    <button class="dropbtn">Productos</button>
+    <div class="dropdown-content">
+      <a href="#">Mostrar</a>
+      <a href="#">Agregar</a>
+      <a href="#" class="btn" data-toggle="modal" data-target="#ActualizarProducto">Actualizar</a>
+      <a href="#">Eliminar</a>
+    </div>
+  </div>
+</template>
+
+<!-- <template name="productoMod">
+  <div class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Actualización de Productos</h4>
+        </div>
+        <div class="modal-body center">
+          {{> quickForm buttonContent="Agregar" schema=Schemas type="method" meteormethod="productos.actualizar" id="ProductoActualizar"}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template> -->

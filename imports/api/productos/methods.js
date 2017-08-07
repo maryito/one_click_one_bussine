@@ -6,24 +6,19 @@ import { Productos } from './productos.js';
 import { ProdSchemas } from './schemas.js';
 
 Meteor.methods({
-  'productos.insert'(nombre) {
-    check(nombre, String);
+  'productos.agregar'(producto) {
+    const a = ProdSchemas.addValidator(producto);
+    console.log(a, producto);
+    check(producto, {
+      nombre: String,
+      cantidad: Number,
+      precio: Number,
+      proveedor: String,
+      marca: String,
+    });
 
     return Productos.insert({
-      nombre,
-      createdAt: new Date(),
-    });
-  },
-  'productos.add'(form) {
-    const data = form;
-    console.log(form);
-    // ProdSchemas.addValidator(form);
-    check(data, ProdSchemas);
-    // check(form.nombre, String);
-    // console.log(from);
-    const nombre = form.nombre;
-    return Productos.insert({
-      nombre,
+      producto,
       createdAt: new Date(),
     });
   },

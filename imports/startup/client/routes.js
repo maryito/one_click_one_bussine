@@ -16,17 +16,17 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/proveedor', {
-  name: 'App.proveedor',
+FlowRouter.route('/ordenes', {
+  name: 'App.ordenesCompras',
   action() {
-    BlazeLayout.render('App_body', { main: 'proveedor' });
+    BlazeLayout.render('App_body', { main: 'ordenesCompras' });
   },
 });
 
-FlowRouter.route('/fabricante', {
-  name: 'App.fabricante',
+FlowRouter.route('/productos', {
+  name: 'App.producto',
   action() {
-    BlazeLayout.render('App_body', { main: 'fabricante' });
+    BlazeLayout.render('App_body', { main: 'producto' });
   },
 });
 FlowRouter.notFound = {

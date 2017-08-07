@@ -1,8 +1,9 @@
 <template name="App_body">
-  <div>
-    {{> navegacion}}
+  <div class="container">
+    {{> navegacion}} 
+    <div>
+      {{> Template.dynamic template=main}}
+    </div> 
   </div>
-  <div>
-   {{> Template.dynamic template=main}}
-  </div>
+
 </template>
