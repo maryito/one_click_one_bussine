@@ -1,6 +1,5 @@
 .jumbotron {
-    
-    min-height: 400px;
+    max-height: 500px;
     border-radius: 40px;
     background-image: url("/img/fondo.jpg");
     
@@ -21,7 +20,7 @@
 }
 
 .div-iconos > div > .glyphicon{
-    font-size: 50px;
+    font-size: 6vh;
     float: left;
 }
 
