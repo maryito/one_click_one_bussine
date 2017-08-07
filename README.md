@@ -48,14 +48,23 @@ meteor --port 4000
 # DESARROLLADO
 **Equipo de Sistema Dinánimos:**
 * [Maryon Jose Torres Rodriguez](https://github.com/maryito) 
-* **Richar**
-* **Tomas**
+* **Richard **
+* **Tomas** https://github.com/tomasez
 * **Griselda Ureña**
-* **Ivan**
+* **Ivan Hidalgo** https://github.com/ihidalgo
 * **Michael Abril**
-* **Alberto**
-* **Josue**
-* **Yelizat**
+* **Alberto Wen**
+* **Josue De Leon** https://github.com/JOSUEXLION
+* **Yelitza**
+* **cristopher**
+* **Noel**
+* **Rey**
+* **Roy Coba**
+* **Paula**
+* **Miguel Rojas**
+
+
+
 
 # Lincencia
 MIT 
