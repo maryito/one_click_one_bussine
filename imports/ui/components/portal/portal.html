@@ -1,0 +1,112 @@
+<template name="portal">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="input-group input-group-lg">
+          <div class="input-group-btn search-panel">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            	<span id="search_concept">Filtrar por</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#tiempo">Tiempo</a></li>
+              <li><a href="#precio">Precio</a></li>
+            </ul>
+          </div>
+          <input type="text" id="nombre_buscar" class="form-control" name="producto" value="Laptop" placeholder="Buscar producto...">
+          <span class="input-group-btn">
+             <button class="btn btn-default form-producto" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p class="lead"> Filtros</p>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Tiempo</a>
+          <a href="#" class="list-group-item">Precio</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p class="lead">listado de produxtos</p>
+        <div class="producto col-xs-4 col-lg-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4> {{producto.nombre}} </h4>
+              <p>
+                <!-- {{ producto.proveedor }} -->
+                <b>Cantidad:</b> {{ producto.cantidad }}
+                <b>Proveedor:</b> {{ producto.proveedor }}
+                <b>Marca:</b> {{ producto.marca }}
+                <hr>
+                <b>Tiempo de entrega:</b> {{ producto.tiempo }} Días
+                <!-- logica de cuando singulares y plurales  -->
+              </p>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p class="lead">$ {{ producto.precio }}</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {{#each productos}}
+        <div class="producto col-xs-4 col-lg-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4> {{producto.nombre}} </h4>
+              <p>
+                <!-- {{ producto.proveedor }} -->
+                <b>Cantidad:</b> {{ producto.cantidad }}
+                <b>Proveedor:</b> {{ producto.proveedor }}
+                <b>Marca:</b> {{ producto.marca }}
+                <hr>
+                <b>Tiempo de entrega:</b> {{ producto.tiempo }} Días
+                <!-- logica de cuando singulares y plurales  -->
+              </p>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p class="lead">$ {{ producto.precio }}</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
+                  <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{#if recomendado}}
+      <div class="col-md-3">
+        <p class="lead">RECOMENDACION</p>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+
+
+
+</template>
+
+
+<!-- <template name="productoMod">
+  <div class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Actualización de Productos</h4>
+        </div>
+        <div class="modal-body center">
+          {{> quickForm buttonContent="Agregar" schema=Schemas type="method" meteormethod="productos.actualizar" id="ProductoActualizar"}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template> -->

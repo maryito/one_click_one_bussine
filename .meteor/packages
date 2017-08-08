@@ -24,7 +24,7 @@ less                    # Leaner CSS language
 practicalmeteor:mocha             # A package for writing and running your meteor app and package tests with mocha
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
 stylus
-ian:accounts-ui-bootstrap-3
+#ian:accounts-ui-bootstrap-3
 twbs:bootstrap
 accounts-password
 aldeed:autoform
