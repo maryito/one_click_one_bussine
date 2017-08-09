@@ -37,52 +37,26 @@
 
       <div class="col-md-8">
         <h2>listado de productos</h2>
-        <div class="producto col-xs-4 col-lg-4">
-          <div class="thumbnail">
-            <div class="caption">
-              <h4> {{producto.nombre}} </h4>
-              <p>
-                <!-- {{ producto.proveedor }} -->
-                <b>Cantidad:</b> {{ producto.cantidad }}
-                <b>Proveedor:</b> {{ producto.proveedor }}
-                <b>Marca:</b> {{ producto.marca }}
-                <hr>
-                <b>Tiempo de entrega:</b> {{ producto.tiempo }} Días
-                <!-- logica de cuando singulares y plurales  -->
-              </p>
-              <div class="row">
-                <div class="col-xs-12 col-md-6">
-                  <p class="lead">$ {{ producto.precio }}</p>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                  <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
         {{#each productos}}
         <div class="producto col-xs-4 col-lg-4">
           <div class="thumbnail">
             <div class="caption">
-              <h4> {{producto.nombre}} </h4>
+              <h4> {{nombre}} </h4>
               <p>
                 <!-- {{ producto.proveedor }} -->
-                <b>Cantidad:</b> {{ producto.cantidad }}
-                <b>Proveedor:</b> {{ producto.proveedor }}
-                <b>Marca:</b> {{ producto.marca }}
+                <b>Cantidad:</b> {{ cantidad }}
+                <b>Proveedor:</b> {{ proveedor }}
+                <b>Marca:</b> {{ marca }}
                 <hr>
-                <b>Tiempo de entrega:</b> {{ producto.tiempo }} Días
+                <b>Tiempo de entrega:</b> {{ tiempo }} Días
                 <!-- logica de cuando singulares y plurales  -->
               </p>
               <div class="row">
                 <div class="col-xs-12 col-md-6">
-                  <p class="lead">$ {{ producto.precio }}</p>
+                  <p class="lead">$ {{ precio }}</p>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                  <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a>
-                  <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+                  <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 </div>
               </div>
 

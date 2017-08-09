@@ -1,5 +1,6 @@
 import { Productos } from '/imports/api/productos/productos.js';
-import { conexiones as conx } from '/imports/api/productos/conexiones.js';
+import { Proveedores } from '/imports/api/productos/productos.js';
+import { conexion } from '/imports/api/productos/conexiones.js';
 import { ProdSchemas } from '/imports/api/productos/schemas.js';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
@@ -9,7 +10,8 @@ import './portal.html';
 
 Template.portal.onCreated(function () {
   // Subscricion a productos del producto
-  conx.subscribe('productos');
+  conexion.subscribe('productos');
+  console.log(conexion.status().status);
   Session.set('portal', '');
   Session.set('recomendacion', { tiempo: 0, precio: 0 });
 });
@@ -23,15 +25,15 @@ Template.portal.helpers({
     if (data) {
       console.log(data);
       cant = Number(data.cantidad)
-      productos = Productos.find({ 'producto.nombre': data.nombre, 'producto.cantidad': { $gt: cant } });
+      productos = Proveedores.find({ 'nombre': data.nombre, 'cantidad': { $gt: cant } });
       let tiempo = Session.get('recomendacion').tiempo;
       let precio = Session.get('recomendacion').precio;
 
       datos = { precios: [], tiempos:[]};
 
       productos.forEach((i) => {
-        tim = i.producto.tiempo;
-        prec = i.producto.precio;
+        tim = i.tiempo;
+        prec = i.precio;
         
         datos.precios.push(prec);
         datos.tiempos.push(tim);
@@ -56,7 +58,7 @@ Template.portal.helpers({
       return productos
       // return Productos.find({ 'producto.nombre': data.nombre, 'producto.cantidad': { $gt: data.cantidad} });
     } else {
-      return Productos.find({});
+      return Proveedores.find({});
     }
   },
   recomendado() {

@@ -2,10 +2,10 @@
 
 import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
-import { conexiones } from './conexiones.js';
+import { conexion } from './conexiones.js';
 // base de datos local
 export const Productos = new Mongo.Collection('productos');
 
 // base de datos remotas
-export const Fabricantes = new Meteor.Collection('fabricantes', conexiones);
-export const Proveedores = new Meteor.Collection('proveedores', conexiones);
+// export const Fabricantes = new Meteor.Collection('Proveedores', conexion);
+export const Proveedores = new Meteor.Collection('productos', conexion);
