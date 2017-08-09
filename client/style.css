@@ -1,8 +1,7 @@
-.jumbotron {
-    max-height: 500px;
-    border-radius: 40px;
-    background-image: url("/img/fondo.jpg");
+.jumbo {
     
+    background-color: white !important;
+    box-shadow: 3px grey;
 }   
 
 .login{
@@ -19,7 +18,7 @@
     font-family: 'Saira', sans-serif;
 }
 
-.div-iconos > div > .glyphicon{
+.glyphicon{
     font-size: 6vh;
     float: left;
 }
@@ -64,7 +63,31 @@
     }
 
     .item > img{
-        width: 45em;
+        width: 350px;
     }
 
-    
+.panel {
+    background-color: #004d82; height: 200px;
+    display: none;
+}    
+
+.div-cliente{
+    border-right: 2px dashed gray;
+    min-height: 100%;
+    text-align: center;    
+}
+
+.div-proveedor{
+    min-height: 100%; 
+    text-align: center;
+}
+
+.titulo-portal{
+    font-family: 'Saira', sans-serif;
+    color: white;
+}
+
+.carousel-caption h3, p{
+    color: black;
+    background: white;
+}
