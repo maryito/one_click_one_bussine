@@ -1,7 +1,16 @@
 <template name="App_home">
-  <div class="container-fluid row home">
+  <div class="container-fluid panel col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 div-cliente">
+        <span class="titulo-portal"><h2>PORTAL CLIENTE</h2></span>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 div-proveedor">
+        <span class="titulo-portal"><h2>PORTAL PROVEEDOR</h2></span>
+      </div>
+  </div>
+
+  <div class="container-fluid row home col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="col-md-12">
-      <div class="jumbotron col-md-12 col-sm-12 col-xs-12 col-lg-12" align="center">
+      <div class="container jumbo col-md-12 col-sm-12 col-xs-12 col-lg-12" align="center">
         <div class="row">
           
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo">
@@ -21,7 +30,7 @@
             <div class="icon col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1  icono-contactanos" align="center">
               <span class="glyphicon glyphicon-user col-lg-12 col-md-12 col-sm-12 col-xs-12" aria-hidden="true"></span>
               <br><br>
-              <a href=""><h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Ingresa/Registrate</h4></a>
+              <a href="" id="btn-login"><h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Ingresa/Registrate</h4></a>
             </div>
             <div class="icon col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1  icono-premium" align="center">
               <span class="glyphicon glyphicon-envelope col-lg-12 col-md-12 col-sm-12 col-xs-12" aria-hidden="true"></span>
@@ -43,7 +52,7 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="max-height: 270px;">
     <div class="item active">
       <img src="/img/oneclick.jpg" alt="oneclick">
       <div class="carousel-caption">
