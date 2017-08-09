@@ -1,7 +1,7 @@
 .jumbo {
-    max-height: 500px;
-    border-radius: 40px;
-    background-image: url("/img/fondo.jpg");
+    
+    background-color: white !important;
+    box-shadow: 3px grey;
 }   
 
 .login{
@@ -18,7 +18,7 @@
     font-family: 'Saira', sans-serif;
 }
 
-.div-iconos > div > .glyphicon{
+.glyphicon{
     font-size: 6vh;
     float: left;
 }
@@ -85,4 +85,9 @@
 .titulo-portal{
     font-family: 'Saira', sans-serif;
     color: white;
+}
+
+.carousel-caption h3, p{
+    color: black;
+    background: white;
 }
