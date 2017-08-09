@@ -1,5 +1,7 @@
 <template name="portal">
   <div class="container">
+    <h1>PORTAL DE PRODUCTOS</h1>
+    <hr>
     <div class="row">
       <div class="col-xs-8 col-xs-offset-2">
         <div class="input-group input-group-lg">
@@ -8,8 +10,8 @@
             	<span id="search_concept">Filtrar por</span> <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#tiempo">Tiempo</a></li>
-              <li><a href="#precio">Precio</a></li>
+              <li><a href="#tiempo">Computadoras</a></li>
+              <li><a href="#precio">Impresoras</a></li>
             </ul>
           </div>
           <input type="text" id="nombre_buscar" class="form-control" name="producto" value="Laptop" placeholder="Buscar producto...">
@@ -18,15 +20,23 @@
           </span>
         </div>
       </div>
-      <div class="col-md-3">
-        <p class="lead"> Filtros</p>
-        <div class="list-group">
-          <a href="#" class="list-group-item">Tiempo</a>
-          <a href="#" class="list-group-item">Precio</a>
-        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <aside class="main-sidebar">
+          <session class="sidebar">
+            <p class="lead"> Filtros</p>
+            <div class="list-group">
+              <a href="#" class="list-group-item">Tiempo</a>
+              <a href="#" class="list-group-item">Precio</a>
+            </div>
+          </session>
+        </aside>
       </div>
-      <div class="col-md-6">
-        <p class="lead">listado de produxtos</p>
+
+      <div class="col-md-8">
+        <h2>listado de productos</h2>
         <div class="producto col-xs-4 col-lg-4">
           <div class="thumbnail">
             <div class="caption">
@@ -81,11 +91,17 @@
         </div>
         {{/each}}
       </div>
-      {{#if recomendado}}
-      <div class="col-md-3">
-        <p class="lead">RECOMENDACION</p>
+      <div class="col-md-2">
+        {{#if recomendado}}
+        <aside class="main-sidebar">
+          <session class="sidebar">
+            <p class="lead">RECOMENDACION</p>
+          </session>
+        </aside>
+        {{else}}
+        <h3>Recomendaciones</h3>
+        {{/if}}
       </div>
-      {{/if}}
     </div>
   </div>
 

@@ -31,7 +31,7 @@ git push
 ### Eliminar una rama 
 ```git branch -d nombre_de_la_rama```
 
-[x]*Como ejecutar la web del proveedor y fabricante **construyecdo***
+[x]*Como ejecutar la web del proveedor y fabricante **Construcyedo***
 Se Cambiaría a la rama inventarios
 ``` 
 git checkout inventarios 
