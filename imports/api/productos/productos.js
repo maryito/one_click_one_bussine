@@ -7,5 +7,5 @@ import { conexiones } from './conexiones.js';
 export const Productos = new Mongo.Collection('productos');
 
 // base de datos remotas
-export const Fabricantes = new Meteor.Collection('fabricantes', conexiones.fab);
-export const Proveedores = new Meteor.Collection('proveedores', conexiones.prov);
+export const Fabricantes = new Meteor.Collection('fabricantes', conexiones);
+export const Proveedores = new Meteor.Collection('proveedores', conexiones);

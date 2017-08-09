@@ -7,8 +7,8 @@ Template.fabricante.onCreated(function () {
   // Subscricion a productos del fabricante
   // conexiones.fab.subscribe('fabricante.productos');
   // console.log(conexiones.fab.status().status);
-  conx.fab.subscribe('fabricante.productos');
-  console.log(conx.fab.status().status);
+  conx.subscribe('fabricante.productos');
+  console.log(conx.status().status);
 });
 
 Template.fabricante.helpers({

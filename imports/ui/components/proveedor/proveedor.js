@@ -7,8 +7,8 @@ Template.proveedor.onCreated(function () {
   // Subscricion a productos del proveedor
   // conexiones.prov.subscribe('proveedor.productos');
   // console.log(conexiones.prov.status().status);
-  conx.prov.subscribe('proveedor.productos');
-  console.log(conx.prov.status().status);
+  conx.subscribe('proveedor.productos');
+  console.log(conx.status().status);
 });
 
 Template.proveedor.helpers({

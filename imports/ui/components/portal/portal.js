@@ -1,4 +1,5 @@
 import { Productos } from '/imports/api/productos/productos.js';
+import { conexiones as conx } from '/imports/api/productos/conexiones.js';
 import { ProdSchemas } from '/imports/api/productos/schemas.js';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
@@ -8,7 +9,7 @@ import './portal.html';
 
 Template.portal.onCreated(function () {
   // Subscricion a productos del producto
-  Meteor.subscribe('productos');
+  conx.subscribe('productos');
   Session.set('portal', '');
   Session.set('recomendacion', { tiempo: 0, precio: 0 });
 });
