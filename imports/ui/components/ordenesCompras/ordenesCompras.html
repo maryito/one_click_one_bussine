@@ -1,15 +1,35 @@
 <template name="ordenesCompras">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Modulo de Ordenes de Compras</h1>
-      <hr>
-      <h2>Listado de ordenes de compras.</h2>
-      <ul>
-        {{#each ordenes}}
-        <li> {{nombre}} </li>
-        {{/each}}
-      </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Modulo de Ordenes de Compras</h1>
+        <hr>
+        <br>
+        <table class="tb-orden table table-hover table-striped">
+          <thead>
+            <tr>
+              <th># orden</th>
+              <th>Empresa</th>
+              <th>Cantidad</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Ubicacion</th>
+              <th>Envio</th>
+            </tr>
+          </thead>
+          <thbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </thbody>
+        </table>
+      </div>
     </div>
   </div>
-
 </template>
