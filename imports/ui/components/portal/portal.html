@@ -5,15 +5,6 @@
     <div class="row">
       <div class="col-xs-8 col-xs-offset-2">
         <div class="input-group input-group-lg">
-          <div class="input-group-btn search-panel">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            	<span id="search_concept">Filtrar por</span> <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#tiempo">Computadoras</a></li>
-              <li><a href="#precio">Impresoras</a></li>
-            </ul>
-          </div>
           <input type="text" id="nombre_buscar" class="form-control" name="producto" value="Laptop" placeholder="Buscar producto...">
           <span class="input-group-btn">
              <button class="btn btn-default form-producto" type="button"><span class="glyphicon glyphicon-search"></span></button>
@@ -22,6 +13,7 @@
       </div>
     </div>
     <br>
+    <!-- {{#if MostrarProductos }} -->
     <div class="row">
       <div class="col-md-2">
         <aside class="main-sidebar">
@@ -30,12 +22,21 @@
             <div class="list-group">
               <a href="#" class="list-group-item">Tiempo</a>
               <a href="#" class="list-group-item">Precio</a>
+              <a href="#" class="list-group-item">Marca</a>
             </div>
           </session>
         </aside>
       </div>
+      <div class="col-md-10">
+        {{#if recomendado}}
+        <aside class="main-sidebar">
+          <session class="sidebar">
+            <p class="lead">RECOMENDACION</p>
+          </session>
+          <button class="btn btn-default"> Mas resultados</button> 
 
-      <div class="col-md-8">
+        </aside>
+        {{else}}
         <h2>listado de productos</h2>
         {{#each productos}}
         <div class="producto col-xs-4 col-lg-4">
@@ -59,44 +60,24 @@
                   <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
         {{/each}}
-      </div>
-      <div class="col-md-2">
-        {{#if recomendado}}
-        <aside class="main-sidebar">
-          <session class="sidebar">
-            <p class="lead">RECOMENDACION</p>
-          </session>
-        </aside>
-        {{else}}
-        <h3>Recomendaciones</h3>
+
+        <button class="btn btn-default"> Mas resultados</button> 
         {{/if}}
       </div>
     </div>
+    <!-- {{else}} -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1> Agregar informacion.....</h1>
+      </div>
+    </div>
+    <!-- {{/if}} -->
   </div>
 
 
 
 </template>
-
-
-<!-- <template name="productoMod">
-  <div class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content center">
-        <div class="modal-header">
-          <button class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"> Actualización de Productos</h4>
-        </div>
-        <div class="modal-body center">
-          {{> quickForm buttonContent="Agregar" schema=Schemas type="method" meteormethod="productos.actualizar" id="ProductoActualizar"}}
-
-        </div>
-      </div>
-    </div>
-  </div>
-</template> -->
