@@ -1,9 +1,23 @@
 <template name="App_body">
-  <div class="container">
-    {{> navegacion}} 
-    <div>
-      {{> Template.dynamic template=main}}
-    </div> 
+  <div class="home">
+    <div class="container-fluid display-table">
+      {{> demo }}
+    </div>
   </div>
+</template>
 
+<template name="demo">
+  <div class="container-fluid display-table">
+    <div class="row display-table-row">
+      {{> navLateral}}
+      <div class="col-md-10 col-sm-11 display-table-cell v-align">
+        <div class="row">
+         {{> navegacion}}
+        </div>
+        <div class="user-dashboard">
+           {{> Template.dynamic template=main}}
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

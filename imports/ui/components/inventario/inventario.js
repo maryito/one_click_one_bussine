@@ -4,15 +4,15 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 
-import './producto.html';
+import './inventario.html';
 
-Template.producto.onCreated(function () {
+Template.inventario.onCreated(function () {
   // Subscricion a productos del producto
   Meteor.subscribe('productos');
   Session.set('info', '');
 });
 
-Template.producto.helpers({
+Template.inventario.helpers({
   Schemas() {
     return ProdSchemas;
   },
@@ -24,7 +24,7 @@ Template.producto.helpers({
   },
 });
 
-Template.producto.events({
+Template.inventario.events({
   'click #editar'(events) {
     events.preventDefault();
     Session.set('info', this);
@@ -42,7 +42,7 @@ Template.producto.events({
     }
   },
 });
-Template.producto.rendered = function () {
+Template.inventario.rendered = function () {
     $('.tb-producto').dataTable(
       {
         responsive: true,

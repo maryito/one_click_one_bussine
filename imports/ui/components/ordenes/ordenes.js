@@ -1,21 +1,21 @@
 import { Compras } from '/imports/api/compras/compras.js';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import './ordenesCompras.html';
-// import { dataTable } from 'meteor/twbs:bootstrap';
+import './ordenes.html';
+import { dataTable } from 'meteor/twbs:bootstrap';
 
-Template.ordenesCompras.onCreated(function () {
-  // Subscricion a productos del Proveedor
+Template.ordenes.onCreated(function () {
+  // Subscricion a productos
   Meteor.subscribe('compras');
 });
 
-Template.ordenesCompras.helpers({
-  ordenes() {
+Template.ordenes.helpers({
+  ListdoOrdenes() {
     return Compras.find({});
   },
 });
 
-Template.ordenesCompras.rendered = function () {
+Template.ordenes.Onrendered = function () {
     $('.tb-orden').dataTable(
       {
         responsive: true,
