@@ -1,35 +1,23 @@
 <template name="ordenes">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Modulo de Ordenes de Compras</h1>
-        <hr>
-        <br>
-        <table class="tb-orden table table-hover table-striped">
-          <thead>
-            <tr>
-              <th># orden</th>
-              <th>Empresa</th>
-              <th>Cantidad</th>
-              <th>Producto</th>
-              <th>Precio</th>
-              <th>Ubicacion</th>
-              <th>Envio</th>
-            </tr>
-          </thead>
-          <thbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </thbody>
-        </table>
-      </div>
+  <h1>Ordenes de Compras</h1>
+  <div class="row">
+    <div class="col-md-7 col-sm-7 col-xs-12 gutter">
+      <ul class="list-group">
+        <h1>Pedidos</h1>
+        <li class="list-group-item list-group-item-warning">
+          # orden Empresa Cantidad Producto Precio Ubicacion Envio
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+      <ul class="list-group">
+        <h1>Ultimas Ventas</h1>
+        <li class="list-group-item list-group-item-info">Empresa 88 <span class="badge">$12K</span></li>
+        <li class="list-group-item list-group-item-info">Empresa 41 <span class="badge">$102K</span></li>
+        <li class="list-group-item list-group-item-info">Empresa 51 <span class="badge">$99lK</span></li>
+        <li class="list-group-item list-group-item-info">Empresa 10 <span class="badge">$1K</span></li>
+      </ul>
     </div>
   </div>
 </template>
