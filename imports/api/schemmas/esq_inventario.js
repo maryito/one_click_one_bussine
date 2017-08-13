@@ -39,9 +39,13 @@ export const InventarioSchema = new SimpleSchema({
                 { label: 'Computadora', value: '0' },
                 { label: 'Impresora', value: '1' },
                 { label: 'software', value: '2' },
-                { label: '4', value: 'otro' },
+                { label: 'otro', value: '3' },
       ],
     },
   },
 });
+
+
+
+
 

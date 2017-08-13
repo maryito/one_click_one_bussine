@@ -55,7 +55,7 @@ export const EmpresaProduc = new SimpleSchema({
 });
 
 
-Computadora = new SimpleSchema ({
+export const Computadora = new SimpleSchema({
 
   id: {
     label: 'ID',
@@ -66,20 +66,20 @@ Computadora = new SimpleSchema ({
   modelo: {
     label: 'Modelo de Computadora',
     type: String,
-    min :1,
+    min: 1,
     max: 30,
   },
-    procesador: {
+  procesador: {
     label: 'Procesador de la Computadora',
     type: String,
     max: 30,
   },
-    sis_operat: {
+  sis_operat: {
     label: 'Sistema Operativo',
     type: String,
     max: 30,
   },
-    Memory: {
+  Memory: {
     label: 'Memoria Ram',
     type: Number,
     max: 30,
@@ -94,15 +94,15 @@ Computadora = new SimpleSchema ({
     type: Number,
     max: 5,
   },
-})
+});
 
-Impresora = new SimpleSchema ({
+export const Impresora = new SimpleSchema({
   id: {
     label: 'ID',
     type: String,
     max: 5,
   },
-    marca : {
+  marca: {
     label: 'Marca de la Computadora',
     type: String,
     max: 30,
@@ -111,11 +111,11 @@ Impresora = new SimpleSchema ({
     type: String,
     autoform: {
       options: [
-                { label: 'Multifuncional', value: 0 },
-                { label: 'Solo Fax ', value:  1 },
-                { label: 'Solo Escaner', value: 2 },
-                { label: 'Fotocopiadora', value: 3 },
-                { label: 'otro', value: 4 },
+                { label: 'Multifuncional', value: 'multifuncional' },
+                { label: 'Solo Fax ', value: 'solofax' },
+                { label: 'Solo Escaner', value: 'soloescaner' },
+                { label: 'Fotocopiadora', value: 'fotocopiadora' },
+                { label: 'otro', value: 'otro' },
       ],
     },
   },
@@ -123,9 +123,9 @@ Impresora = new SimpleSchema ({
     type: String,
     autoform: {
       options: [
-                { label: 'Red', value: 0 },
-                { label: 'Usb ', value:  1 },
-                { label: 'otro', value: 2 },
+                { label: 'Red', value: 'red' },
+                { label: 'Usb ', value: 'usb' },
+                { label: 'otro', value: 'otro' },
       ],
     },
   },
@@ -133,24 +133,24 @@ Impresora = new SimpleSchema ({
     type: String,
     autoform: {
       options: [
-                { label: 'Laser', value: 0 },
-                { label: 'Recargable por Tinta ', value:  1 },
-                { label: 'otro', value: 2 },
+                { label: 'Laser', value: 'laser' },
+                { label: 'Recargable por Tinta ', value: 'recargabletinta' },
+                { label: 'otro', value: 'otro' },
       ],
     },
   },
-})
+});
 
-Software = new SimpleSchema ({
-  
+export const Software = new SimpleSchema({
+
   office_enterprise: {
     type: String,
     autoform: {
       options: [
-                { label: 'Standar', value: 0 },
-                { label: 'Plus', value:  1 },
-                { label: 'Premium', value: 2 },
-                { label: 'otro', value: 3 },
+                { label: 'Standar', value: 'standar' },
+                { label: 'Plus', value: 'plus' },
+                { label: 'Premium', value: 'premium' },
+                { label: 'otro', value: 'otro' },
       ],
     },
   },
@@ -158,16 +158,15 @@ Software = new SimpleSchema ({
     type: String,
     autoform: {
       options: [
-                { label: 'Bitdefender', value: 0 },
-                { label: 'Kaspersky', value:  1 },
-                { label: 'McAfee', value: 2 },
-                { label: 'Norton', value: 3 },
-                { label: 'Eset Nod32', value: 4 },
-                { label: 'otro', value: 5 },
+                { label: 'Bitdefender', value: 'bitdefender' },
+                { label: 'Kaspersky', value: 'kaspersky' },
+                { label: 'McAfee', value: 'mcafree' },
+                { label: 'Norton', value: 'norton' },
+                { label: 'Eset Nod32', value: 'esetnod32' },
+                { label: 'otro', value: 'otro' },
       ],
     },
   },
 
 
-  
-})
+});
