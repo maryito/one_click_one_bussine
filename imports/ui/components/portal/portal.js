@@ -12,6 +12,7 @@ Template.portal.onCreated(function () {
   // Subscricion a productos del producto
   conexion.subscribe('productos');
   console.log(conexion.status().status);
+  Session.set('habilitar',false);
   Session.set('portal', '');
   Session.set('recomendacion', { tiempo: 0, precio: 0 });
 });
@@ -20,12 +21,19 @@ Template.portal.helpers({
   Schemas() {
     return ProdSchemas;
   },
+  MostrarProductos() {
+    const estado = Session.get('habilitar');
+      return estado;
+  },
   productos() {
     data = Session.get('portal');
     if (data) {
-      console.log(data);
-      cant = Number(data.cantidad)
-      productos = Proveedores.find({ 'nombre': data.nombre, 'cantidad': { $gt: cant } });
+      console.log('Producto a filtrar: '+data);
+
+      // cant = Number(data.cantidad)
+      // productos = Proveedores.find({ 'nombre': data.nombre, 'cantidad': { $gt: cant } });
+      productos = Proveedores.find({ 'nombre': data});
+
       let tiempo = Session.get('recomendacion').tiempo;
       let precio = Session.get('recomendacion').precio;
 
@@ -63,19 +71,22 @@ Template.portal.helpers({
   },
   recomendado() {
     return Session.get('portal');
-  }
+  },
 });
 
 Template.portal.events({
   'click .form-producto'(events, template) {
     events.preventDefault();
+    Session.set('habilitar',true);
+    
     console.log("evento");
-    data = {};
-    data.nombre = template.find("#nombre_buscar").value;
-    // data.cantidad = events.target.cantidad.value;
 
+    // Obtener el valor del producto
+    data = template.find("#nombre_buscar").value;
 
+    // asignamos a una variable global
     Session.set('portal', data)
+
     console.log("Buscando", data);
   }
 })
