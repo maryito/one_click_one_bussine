@@ -13,7 +13,11 @@
       </nav>
       <div class="search hidden-xs hidden-sm">
         <!-- <input type="text" placeholder="Search" id="search"> -->
+        {{#if currentUser}}
+        <h1> Bienvenido <strong>{{ nombreEmpresa }}</strong></h1>
+        {{else}}
         <h1> Bienvenido <strong>One Click One Bussines</strong></h1>
+        {{/if}}
       </div>
     </div>
     <div class="col-md-5">

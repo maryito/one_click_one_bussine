@@ -9,15 +9,21 @@
 <template name="demo">
   <div class="container-fluid display-table">
     <div class="row display-table-row">
-      {{> navLateral}}
+      {{#if currentUser}} 
+      {{> navLateral}} 
+      {{/if}}
       <div class="col-md-10 col-sm-11 display-table-cell v-align">
+
         <div class="row">
-         {{> navegacion}}
+          {{> navegacion}}
         </div>
+
+
         <div class="user-dashboard">
-           {{> Template.dynamic template=main}}
+          {{> Template.dynamic template=main}}
         </div>
       </div>
     </div>
+
   </div>
 </template>

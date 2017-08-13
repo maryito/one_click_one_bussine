@@ -1,18 +1,38 @@
 import SimpleSchema from 'simpl-schema';
+import { Productos } from '/imports/api/productos/productos.js';
 
 SimpleSchema.extendOptions(['autoform']);
 
 export const InventarioSchema = new SimpleSchema({
 
   id: {
-    label: 'ID',
+    label: 'Código de referencia',
     type: String,
+  },
+
+  categoria: {
+    type: String,
+    autoform: {
+      options: [
+        { label: 'Computadora', value: 0 },
+        { label: 'Impresora', value: 1 },
+        { label: 'Software', value: 2 },
+        { label: 'Otro', value: 3 },
+      ],
+    },
   },
 
   nombre: {
     label: 'Nombre del producto',
     type: String,
-    max: 30,
+    autoform: {
+      afFieldInput: {
+        firstOption: 'Seleccione el producto',
+      },
+      // options: () => Producto.find({ proveedor: "nombre del proveedor" }).map((obc) => (
+      options: () => Productos.find().map((obc) => (
+        { label: "Nombre: " + obc.nombre + " código: " + obc._id, value: '' + obc._id }))
+    },
   },
 
   cantidad: {
@@ -24,6 +44,12 @@ export const InventarioSchema = new SimpleSchema({
   precio_unit: {
     label: 'Precio Unitario',
     type: Number,
+    min: 0,
+  },
+
+  stock: {
+    label: 'Cantidad en stock',
+    type: Number,
     min: 1,
   },
   descripcion: {
@@ -31,17 +57,10 @@ export const InventarioSchema = new SimpleSchema({
     type: String,
     min: 1,
   },
-
-  Categoria: {
+  proveedor: {
+    label: 'Proveedor',
     type: String,
-    autoform: {
-      options: [
-                { label: 'Computadora', value: '0' },
-                { label: 'Impresora', value: '1' },
-                { label: 'software', value: '2' },
-                { label: '4', value: 'otro' },
-      ],
-    },
   },
+
 });
 

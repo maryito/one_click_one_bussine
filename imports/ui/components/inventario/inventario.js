@@ -1,5 +1,5 @@
-import { Productos } from '/imports/api/productos/productos.js';
-import { ProdSchemas } from '/imports/api/productos/schemas.js';
+import { Inventario } from '/imports/api/inventario/inventario.js';
+import { InventarioSchema } from '/imports/api/schemmas/esq_inventario.js';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
@@ -7,17 +7,23 @@ import { Session } from 'meteor/session';
 import './inventario.html';
 
 Template.inventario.onCreated(function () {
-  // Subscricion a productos del producto
-  Meteor.subscribe('productos');
-  Session.set('info', '');
+  // Subscricion a inventario del producto
+  if (Meteor.userId()) {
+    Meteor.subscribe('inventario');
+    Meteor.subscribe('productos');
+    Session.set('info', '');
+  } else {
+    console.log("Debe iniciar sesion");
+  }
+
 });
 
 Template.inventario.helpers({
   Schemas() {
-    return ProdSchemas;
+    return InventarioSchema;
   },
   productos() {
-    return Productos.find({});
+    return Inventario.find({});
   },
   ProductoInfo() {
     return Session.get('info');
@@ -34,7 +40,7 @@ Template.inventario.events({
     events.preventDefault();
     const resp = confirm(`Seguro que desea eliminar el producto: ${this.nombre}`);
     if (resp) {
-      Meteor.call('productos.eliminar', this._id, function(error) {
+      Meteor.call('producto.eliminar', this._id, function (error) {
         if (error) {
           console.log('error', error);
         }
@@ -43,10 +49,10 @@ Template.inventario.events({
   },
 });
 Template.inventario.rendered = function () {
-    $('.tb-producto').dataTable(
-      {
-        responsive: true,
-        lengthMenu:	[[5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "Todos"]]
-      }
-    );
+  $('.tb-producto').dataTable(
+    {
+      responsive: true,
+      lengthMenu: [[5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "Todos"]]
+    }
+  );
 };
