@@ -69,6 +69,7 @@
         {{/if}}
       </div>
     </div>
+<<<<<<< HEAD
     <!-- {{else}} -->
     <div class="row">
       <div class="col-md-12">
@@ -76,8 +77,131 @@
       </div>
     </div>
     <!-- {{/if}} -->
+=======
+     {{>login}}
+>>>>>>> rama-richard-2
   </div>
 
 
 
+<<<<<<< HEAD
+=======
+</template>
+
+
+<!-- <template name="productoMod">
+  <div class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> Actualización de Productos</h4>
+        </div>
+        <div class="modal-body center">
+          {{> quickForm buttonContent="Agregar" schema=Schemas type="method" meteormethod="productos.actualizar" id="ProductoActualizar"}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template> -->
+
+
+
+<template name="register">  
+
+  <div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Sign up once and watch any of our free demos.</h5>
+					<form class="" method="post" action="#">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+
+</template>
+
+
+
+
+<template name="login">
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <img class="profile-img" src="/img/one-click-login.png" alt="">
+                <h3 align="center">OneClick</h3>
+                <form class="form-signin">
+                <input type="text" class="form-control" placeholder="Correo" required autofocus>
+                <input type="password" class="form-control" placeholder="Contraseña" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Sign in</button>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    <div class="check">Recuerdame</div>
+                </label>
+                <a href="#" class="pull-right need-help">¿Necesitas ayuda? </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="#" class="text-center new-account">Registrate</a>
+        </div>
+    </div>
+</div>
+>>>>>>> rama-richard-2
 </template>
