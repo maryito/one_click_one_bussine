@@ -80,12 +80,16 @@ Template.producto.helpers({
   },
 
   productos() {
-    const data = Productos.find({});
+    const data = Productos.find({ categoria: "computadora" });
     return data;
   },
   productosImp() {
     const dataImp = Productos.find({ categoria: "impresora" });
     return dataImp;
+  },
+  productosSoft() {
+    const dataSof = Productos.find({ categoria: "software" });
+    return dataSof;
   },
   ProductoInfo() {
     return Session.get('info');
