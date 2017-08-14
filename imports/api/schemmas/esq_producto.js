@@ -141,7 +141,7 @@ export const Impresora = new SimpleSchema({
       ],
     },
   },
-  tipo_impre: {
+  tipo_impresion: {
     type: String,
     autoform: {
       options: [
