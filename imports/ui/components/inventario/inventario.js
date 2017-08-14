@@ -1,13 +1,10 @@
 import { Inventario } from '/imports/api/inventario/inventario.js';
 import { InventarioSchema } from '/imports/api/schemmas/esq_inventario.js';
-import { Productos } from '/imports/api/productos/productos.js';
-import { ProdSchemas } from '/imports/api/productos/schemas.js';
-import { Computadora, Impresora, Software } from '/imports/api/schemmas/esq_producto.js';
 
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
-
+import './producto.js';
 import './inventario.html';
 
 Template.inventario.onCreated(function () {
