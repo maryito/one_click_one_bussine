@@ -44,11 +44,12 @@
 }
 
     .item > img{
-        width: 350px;
+        width: 500px;
     }
 
 .panel {
-    background-color: #004d82; height: 200px;
+    background-color: #004d82; 
+    height: 200px;
     display: none;
 }    
 
@@ -68,7 +69,7 @@
     color: white;
 }
 
-.carousel-caption h3, p{
+.carousel-caption h3, .carousel-caption p{
     color: black;
     background: white;
 }
@@ -321,5 +322,6 @@ span.input-group-addon i {
 	padding-bottom: 10px;
 }
 .footer-bottom p.pull-left {
-	padding-top: 6px;
+    padding-top: 6px;
+    
 }
