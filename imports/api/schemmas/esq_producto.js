@@ -57,6 +57,12 @@ export const EmpresaProduc = new SimpleSchema({
 
 export const Computadora = new SimpleSchema({
 
+  categoria: {
+    label: 'Categoria',
+    type: String,
+    defaultValue: 'computadora',
+  },
+
   id: {
     label: 'ID',
     type: String,
@@ -97,13 +103,19 @@ export const Computadora = new SimpleSchema({
 });
 
 export const Impresora = new SimpleSchema({
+
+  categoria: {
+    label: 'Categoria',
+    type: String,
+    defaultValue: 'impresora',
+  },
   id: {
     label: 'ID',
     type: String,
     max: 5,
   },
   marca: {
-    label: 'Marca de la Computadora',
+    label: 'Marca de la Impresora',
     type: String,
     max: 30,
   },
@@ -142,6 +154,12 @@ export const Impresora = new SimpleSchema({
 });
 
 export const Software = new SimpleSchema({
+
+  categoria: {
+    label: 'Categoria',
+    type: String,
+    defaultValue: 'software',
+  },
 
   office_enterprise: {
     type: String,

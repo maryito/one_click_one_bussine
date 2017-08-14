@@ -1,7 +1,10 @@
 import { Productos } from '/imports/api/productos/productos.js';
 import { ProdSchemas } from '/imports/api/productos/schemas.js';
-import { EmpresaProduc } from '/imports/api/schemmas/esq_producto.js';
-import { Computadora } from '/imports/api/schemmas/esq_producto.js';
+//import { EmpresaProduc } from '/imports/api/schemmas/esq_producto.js';
+import { Computadora, Impresora, Software } from '/imports/api/schemmas/esq_producto.js';
+//import { Impresora } from '/imports/api/schemmas/esq_producto.js';
+//import { Software } from '/imports/api/schemmas/esq_producto.js';
+//
 
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
@@ -60,14 +63,29 @@ Template.producto.onCreated(function () {
   // Subscricion a productos del producto
   Meteor.subscribe('productos');
   Session.set('info', '');
+  Session.set('categoria', '');
 });
 
 Template.producto.helpers({
   Schemas() {
-    return EmpresaProduc;
+    return Computadora;
   },
+
+  Schemas1() {
+    return Impresora;
+  },
+
+  Schemas2() {
+    return Software;
+  },
+
   productos() {
-    return Productos.find({});
+    const data = Productos.find({});
+    return data;
+  },
+  productosImp() {
+    const dataImp = Productos.find({ categoria: "impresora" });
+    return dataImp;
   },
   ProductoInfo() {
     return Session.get('info');
