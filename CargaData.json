@@ -1,0 +1,66 @@
+/* 1 */
+{
+    "_id" : "oF5hn2vaL4hd52oam",
+    "categoria" : "impresora",
+    "id" : "jkhhk",
+    "marca" : "nbnmbmn",
+    "funcionalidad" : "multifuncional",
+    "Conectividad" : "usb",
+    "tipo_impre" : "otro"
+}
+
+/* 2 */
+{
+    "_id" : "raeFFZepcFMDrowNL",
+    "categoria" : "software",
+    "office_enterprise" : "plus",
+    "Antivirus" : "norton"
+}
+
+/* 3 */
+{
+    "_id" : "AydoMEfveePRXXZA8",
+    "categoria" : "software",
+    "office_enterprise" : "premium",
+    "Antivirus" : "bitdefender"
+}
+
+/* 4 */
+{
+    "_id" : "Zj6nu3WTLra24mF24",
+    "categoria" : "software",
+    "office_enterprise" : "standar",
+    "Antivirus" : "esetnod32"
+}
+
+/* 5 */
+{
+    "_id" : "qHuWd6xrkMsAcWmkp",
+    "categoria" : "software",
+    "office_enterprise" : "premium",
+    "Antivirus" : "mcafree"
+}
+
+/* 6 */
+{
+    "_id" : "oeZRNMCCJJtfdyidr",
+    "categoria" : "computadora",
+    "id" : "bukgc",
+    "modelo" : "iohiohiug",
+    "procesador" : "jgikghik",
+    "sis_operat" : "jkh",
+    "Memory" : 3,
+    "Disco_duro" : 4,
+    "T_Pantalla" : 4
+}
+
+/* 7 */
+{
+    "_id" : "fXAeiNy6DbB5o3zqw",
+    "categoria" : "impresora",
+    "id" : "jojo",
+    "marca" : "okokol;",
+    "funcionalidad" : "solofax",
+    "Conectividad" : "usb",
+    "tipo_impre" : "recargabletinta"
+}

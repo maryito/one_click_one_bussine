@@ -4,33 +4,36 @@
     <button class="btn" data-toggle="modal" data-target="#AgregarProducto"><span class="glyphicon glyphicon-plus"></span></button>
     <div class="col-md-12 col-sm-7 col-xs-12 gutter">
       <div class="row">
-        <table class="tb-producto table table-hover table-striped">
+        <table class="tb-inventario table table-hover table-striped">
           <thead>
             <tr>
+              <th>Referencia</th>
+              <th>Categoría</th>
               <th>Nombre</th>
-              <th>Precio</th>
-              <th># Cantidad</th>
-              <th>Proveedor</th>
-              <th>Marca</th>
-              <th>Dias</th>
-              <th>Accion</th>
+              <th>Descripción</th>
+              <th>Cantidad</th>
+              <th>Precio Unitario</th>
+              <th>Stock</th>
             </tr>
           </thead>
           <tbody>
+            <!-- listado de productos para el inventario  -->
             {{#each productos}}
             <tr>
+              <td>{{ id }}</td>
+              <td>{{ categoria }}</td>
               <td>{{ nombre }}</td>
-              <td> ${{ precio }}</td>
+              <td>{{ descripcion }}</td>
               <td>{{ cantidad }}</td>
-              <td>{{ proveedor }}</td>
-              <td>{{ marca }}</td>
-              <td>{{ tiempo }}</td>
-              <td>
+              <td>{{ precio_unit }}</td>
+              <td>{{ stock }}</td>
+              <td class="col-xs-2">
                 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>
                 <a href="#" data-id="{{_id}}" id="eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
               </td>
             </tr>
             {{/each}}
+            <!-- fin del listado   -->
           </tbody>
         </table>
       </div>
@@ -51,13 +54,227 @@
         <div class="modal-body center">
           {{#if ProductoInfo}}
           <!--Form Actualizacion de producto  -->
-          {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas id="ProductoActualizar" type="method" 
-          meteormethod="productos.actualizar"}} 
-         {{else}}
+          {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas id="ProductoActualizar" type="method" meteormethod="productos.actualizar"}}
+          {{else}}
           <!--Form Producto nuevo  -->
-          {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas type="method" meteormethod="productos.agregar"
-          id="ProductoAgregar"}} 
+          {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas type="method" meteormethod="inventario.agregar"
+          id="ProductoAgregar"}} {{/if}}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancel" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="ActualizarProducto" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header login-header">
+          <button class="close" data-dismiss="modal">&times;</button> {{#if ProductoInfo}}
+          <!--Actualizacion de producto  -->
+          <h4 class="modal-title"> Actualizacion de Producto</h4>
+          {{else }}
+          <h4 class="modal-title"> Agregar Nuevo Producto</h4>
           {{/if}}
+        </div>
+        <div class="modal-body center">
+          {{#if ProductoInfo}}
+          <!--Form Actualizacion de producto  -->
+          {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas id="InventarioActualizar" type="method" meteormethod="inventario.actualizar"}}
+          {{else}} 
+          <!--Form nuevo producto  -->
+          {{> quickForm doc=ProductoInfo buttonContent="Agregar" schema=Schemas id="InventarioAgregar" type="method"
+          meteormethod="inventario.agregar"}} 
+          {{/if}}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancel" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="producto">
+  <h1>Productos</h1>
+  <div class="row">
+    <div class="col-md-12 col-sm-7 col-xs-12 gutter">
+
+      <div class="row">
+        <h1>Computadora</h1>
+        <button class="btn" id="CatComp" data-toggle="modal" data-target="#AgregarComp"><span class="glyphicon glyphicon-plus"></span> Computadora</button>
+        <hr>
+        <table class="tb-producto table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Categoria </th>
+              <th>ID </th>
+              <th>Modelo</th>
+              <th>Procesador</th>
+              <th>Sistema Operativo</th>
+              <th>Memoria Ram</th>
+              <th>Disco Duro</th>
+              <th>Pantalla</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each productos}}
+            <tr>
+              <td>{{ categoria }}</td>
+              <td>{{ id }}</td>
+              <td> {{ modelo }}</td>
+              <td>{{ procesador }}</td>
+              <td>{{ sis_operat }}</td>
+              <td>{{ Memory }}</td>
+              <td>{{ Disco_duro }}</td>
+              <td>{{ T_Pantalla }}</td>
+              <td>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>
+                <a href="#" data-id="{{_id}}" id="eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="row">
+        <h1> Impresora</h1>
+       <button class="btn" id="CatImpre" data-toggle="modal" data-target="#AgregarImpres"><span class="glyphicon glyphicon-plus"></span> Impresora</button>
+       <hr>
+        <table class="tb-producto table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Marca</th>
+              <th>Funcionalidad</th>
+              <th>Conectividad</th>
+              <th>Tipo de Impresion</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each productosImp}}
+            <tr>
+              <td>{{ id }}</td>
+              <td>{{ marca }}</td>
+              <td>{{ funcionalidad }}</td>
+              <td>{{ Conectividad }}</td>
+              <td>{{ tipo_impre }}</td>
+              <td>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>
+                <a href="#" data-id="{{_id}}" id="eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="row">
+        <h1> Software</h1>
+        <button class="btn" id="CatSoft" data-toggle="modal" data-target="#AgregarSoft"><span class="glyphicon glyphicon-plus"></span> Software</button>
+        <hr>
+        <table class="tb-producto table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Microsoft Office</th>
+              <th>Antivirus</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each productosSoft}}
+            <tr>
+              <td>{{ office_enterprise }}</td>
+              <td>{{ Antivirus }}</td>
+
+              <td>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>
+                <a href="#" data-id="{{_id}}" id="eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- Modal de nuevo producto  -->
+  <div class="modal fade" id="AgregarComp" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header login-header">
+          <button class="close" data-dismiss="modal">&times;</button> {{#if ProductoInfo}}
+          <!--Actualizacion de producto  -->
+          <h4 class="modal-title"> Actualizacion de Producto</h4>
+          {{else}}
+          <h4 class="modal-title"> Agregar Nuevo Producto</h4>
+          {{/if}}
+        </div>
+        <div class="modal-body center">
+          {{#if ProductoInfo}}
+          <!--Form Actualizacion de producto  -->
+          {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas id="ProductoActualizar" type="method" meteormethod="productos.actualizar"}}
+          {{else}}
+          <!--Form Producto nuevo  -->
+          {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas type="method" meteormethod="productos.agregar2"
+          id="ProductoAgregar"}} {{/if}}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancel" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="AgregarImpres" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header login-header">
+          <button class="close" data-dismiss="modal">&times;</button> {{#if ProductoInfo}}
+          <!--Actualizacion de producto  -->
+          <h4 class="modal-title"> Actualizacion de Producto</h4>
+          {{else}}
+          <h4 class="modal-title"> Agregar Nuevo Producto</h4>
+          {{/if}}
+        </div>
+        <div class="modal-body center">
+          {{#if ProductoInfo}}
+          <!--Form Actualizacion de producto  -->
+          {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas1 id="ProductoActualizar" type="method" meteormethod="productos.actualizar"}}
+          {{else}}
+          <!--Form Producto nuevo  -->
+          {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas1 type="method" meteormethod="productos.agregar2"
+          id="ProductoImpAgregar"}} {{/if}}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="cancel" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="AgregarSoft" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content center">
+        <div class="modal-header login-header">
+          <button class="close" data-dismiss="modal">&times;</button> {{#if ProductoInfo}}
+          <!--Actualizacion de producto  -->
+          <h4 class="modal-title"> Actualizacion de Producto</h4>
+          {{else}}
+          <h4 class="modal-title"> Agregar Nuevo Producto</h4>
+          {{/if}}
+        </div>
+        <div class="modal-body center">
+          {{#if ProductoInfo}}
+          <!--Form Actualizacion de producto  -->
+          {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas2 id="ProductoActualizar" type="method" meteormethod="productos.actualizar"}}
+          {{else}}
+          <!--Form Producto nuevo  -->
+          {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas2 type="method" meteormethod="productos.agregar2"
+          id="productosSoftAgregar"}} {{/if}}
         </div>
       </div>
       <div class="modal-footer">

@@ -49,4 +49,8 @@ Meteor.methods({
     //   createdAt: new Date(),
     // });
   },
+  'productos.agregar2'(prod) {
+    console.log(prod)
+       return Productos.insert(prod);
+  },
 });
