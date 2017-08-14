@@ -44,11 +44,12 @@
 }
 
     .item > img{
-        width: 350px;
+        width: 500px;
     }
 
 .panel {
-    background-color: #004d82; height: 200px;
+    background-color: #004d82; 
+    height: 200px;
     display: none;
 }    
 
@@ -68,13 +69,13 @@
     color: white;
 }
 
-.carousel-caption h3, p{
+.carousel-caption h3, .carousel-caption p{
     color: black;
     background: white;
 }
 
 
------------------------------------------------------------- estilos del template registro
+/*------------Estilos para el formulario de registro------------*/
 
 #playground-container {
     height: 500px;
@@ -181,7 +182,7 @@ span.input-group-addon i {
 }
 
 
----------------------------------------estilos del login 
+/*------------Estilos para el formulario de login------------*/
 .form-signin
 {
     max-width: 330px;
@@ -261,4 +262,66 @@ span.input-group-addon i {
 {
     display: block;
     margin-top: 10px;
+}
+
+
+/*------------Estilos para el footer------------*/
+.footer {
+    text-align: center !important;
+    margin-top: 45px;
+	background: #234059 !important;
+	height: auto;
+	padding-bottom: 30px;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #DDDDDD;
+}
+
+.footer h3 {
+	border-bottom: 1px solid #BAC1C8;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 10px;
+	text-transform: uppercase;
+}
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #F5F5F5;
+}
+.footer ul li a {
+	padding: 0 0 5px 0;
+	display: block;
+}
+.footer a {
+	color: #EAEAEF
+}
+.supportLi h4 {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+}
+
+.bg-gray {
+	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+	box-shadow: 0 1px 0 #B4B3B3;
+}
+
+.footer-bottom {
+	background: #E3E3E3;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footer-bottom p.pull-left {
+    padding-top: 6px;
+    
 }
