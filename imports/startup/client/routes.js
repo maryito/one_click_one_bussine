@@ -29,6 +29,12 @@ FlowRouter.route('/inventario', {
     BlazeLayout.render('App_body', { main: 'inventario' });
   },
 });
+FlowRouter.route('/productos', {
+  name: 'App.producto',
+  action() {
+    BlazeLayout.render('App_body', { main: 'producto' });
+  },
+});
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
