@@ -27,16 +27,7 @@ Template.inventario.helpers({
     return InventarioSchema;
   },
   productos() {
-    const data = Productos.find({ categoria: "computadora" });
-    return data;
-  },
-  productosImp() {
-    const dataImp = Productos.find({ categoria: "impresora" });
-    return dataImp;
-  },
-  productosSoft() {
-    const dataSof = Productos.find({ categoria: "software" });
-    return dataSof;
+    return Inventario.find({});
   },
   ProductoInfo() {
     return Session.get('info');
