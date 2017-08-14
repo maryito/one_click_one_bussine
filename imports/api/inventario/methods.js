@@ -6,6 +6,12 @@ import { Inventario } from './inventario.js';
 
 Meteor.methods({
   'inventario.agregar'(prod) {
+    if (!Meteor.userId()) {
+      throw new Meteor.Error(403, "Acceso Denegado");
+    }
+    if (prod.proveedor !== Meteor.userId()) {
+      throw new Meteor.Error(445, "No no no");
+    }
     check(prod, {
       id: String,
       categoria: String,
@@ -18,48 +24,23 @@ Meteor.methods({
     });
     console.log(prod);
     return Inventario.insert(prod);
-    // check(prod, {
-    //   nombre: String,
-    //   cantidad: Number,
-    //   precio: Number,
-    //   proveedor: String,
-    //   marca: String,
-    //   tiempo: Number,
-    // });
-
-    // return inventario.insert({
-    //   id
-    //   nombre: prod.nombre,
-    //   cantidad: prod.cantidad,
-    //   precio: prod.precio,
-    //   proveedor: prod.proveedor,
-    //   marca: prod.marca,
-    //   tiempo: prod.tiempo,
-    //   createdAt: new Date(),
-    // });
   },
   'inventario.eliminar'(id) {
     check(id, String);
-    return inventario.remove(id);
+    return Inventario.remove(id);
   },
   'inventario.actualizar'(prod) {
     check(prod, {
+      id: String,
+      categoria: String,
       nombre: String,
       cantidad: Number,
-      precio: Number,
+      precio_unit: Number,
+      stock: Number,
+      descripcion: String,
       proveedor: String,
-      marca: String,
-      tiempo: Number,
     });
     console.log(prod);
-    // return inventario.update({
-    //   nombre: prod.nombre,
-    //   cantidad: prod.cantidad,
-    //   precio: prod.precio,
-    //   proveedor: prod.proveedor,
-    //   marca: prod.marca,
-    //   tiempo: prod.tiempo,
-    //   createdAt: new Date(),
-    // });
+    return Inventario.update({ "id": prod.id }, { $set: prod });
   },
 });

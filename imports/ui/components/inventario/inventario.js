@@ -34,13 +34,13 @@ Template.inventario.events({
   'click #editar'(events) {
     events.preventDefault();
     Session.set('info', this);
-    alert("* Proximante actualizacion.");
+    // alert("* Proximante actualizacion.");
   },
   'click #eliminar'(events) {
     events.preventDefault();
     const resp = confirm(`Seguro que desea eliminar el producto: ${this.nombre}`);
     if (resp) {
-      Meteor.call('producto.eliminar', this._id, function (error) {
+      Meteor.call('inventario.eliminar', this._id, function (error) {
         if (error) {
           console.log('error', error);
         }
@@ -49,10 +49,39 @@ Template.inventario.events({
   },
 });
 Template.inventario.rendered = function () {
-  $('.tb-producto').dataTable(
+  $('.tb-inventario').dataTable(
     {
       responsive: true,
       lengthMenu: [[5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "Todos"]]
     }
   );
 };
+
+AutoForm.hooks({
+  "InventarioActualizar": {
+    // Called when any submit operation succeeds
+    onSuccess: function (formType, result) {
+      if (result) {
+        $('#ActualizarProducto').modal('hide');
+        return false;
+      }
+    },
+
+    // Called when any submit operation fails
+    onError: function (formType, error) {
+      console.log(error);
+    },
+  },
+
+  "InventarioAgregar": {
+    // Called when any submit operation succeeds
+    onSuccess: function (formType, result) {
+      $('#AgregarProducto').modal('hide');
+      return false;
+    },
+
+    // Called when any submit operation fails
+    onError: function (formType, error) { },  // Called when any submit operation succeeds
+  },
+
+})

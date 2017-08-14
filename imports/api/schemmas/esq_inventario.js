@@ -14,10 +14,10 @@ export const InventarioSchema = new SimpleSchema({
     type: String,
     autoform: {
       options: [
-        { label: 'Computadora', value: 0 },
-        { label: 'Impresora', value: 1 },
-        { label: 'Software', value: 2 },
-        { label: 'Otro', value: 3 },
+        { label: 'Computadora', value: 'computadora' },
+        { label: 'Impresora', value: 'impresora' },
+        { label: 'Software', value: 'software' },
+        { label: 'Otro', value: 'otro' },
       ],
     },
   },
@@ -60,6 +60,14 @@ export const InventarioSchema = new SimpleSchema({
   proveedor: {
     label: 'Proveedor',
     type: String,
+    defaultValue: () => {
+      if (Meteor.isClient) {
+        return Meteor.userId();
+      } else {
+        return this._id;
+      }
+    },
+    autoform: { readonly: true },
   },
 
 });

@@ -32,29 +32,6 @@ Accounts.ui.config(
                         return false;
                     } else { return true; }
                 },
-            }, {
-                fieldName: 'roles',
-                fieldLabel: 'Perfil',
-                inputType: 'select',
-                showFieldLabel: true,
-                empty: 'Por favor seleccione la perfil',
-                data: [{
-                    id: 1,
-                    label: 'Proveedor',
-                    value: 'proveedor',
-                }, {
-                    id: 2,
-                    label: 'Fabricante',
-                    value: 'fabricante',
-                }],
-                visible: true,
-                validate(value, errorFunction) {
-                    // agregar esquemas
-                    if (!value) {
-                        errorFunction('Por favor ingrese el perfil');
-                        return false;
-                    } else { return true; }
-                },
             },
         ],
     });
