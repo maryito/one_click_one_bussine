@@ -51,6 +51,9 @@ Meteor.methods({
   },
   'productos.agregar2'(prod) {
     console.log(prod)
-       return Productos.insert(prod);
+    _.extend(prod, {
+      creado: new Date(),
+    });
+    return Productos.insert(prod);
   },
 });

@@ -1,66 +1,104 @@
+
+// usuario
 /* 1 */
 {
-    "_id" : "oF5hn2vaL4hd52oam",
-    "categoria" : "impresora",
-    "id" : "jkhhk",
-    "marca" : "nbnmbmn",
-    "funcionalidad" : "multifuncional",
-    "Conectividad" : "usb",
-    "tipo_impre" : "otro"
+    "_id" : "dcbmhABnMkLxsASNb",
+    "createdAt" : ISODate("2017-08-14T02:41:11.811Z"),
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$nRre9TqtrgeeOf9dy17GpuujtRkMYPrxaJshXl6fS.eZQ8D.kj0iC"
+        },
+        "resume" : {
+            "loginTokens" : [ 
+                {
+                    "when" : ISODate("2017-08-14T02:46:07.177Z"),
+                    "hashedToken" : "S/6t89+olfyCk+uNj7JOW4NWdBULgMkpCRHPoI0WQy8="
+                }
+            ]
+        }
+    },
+    "username" : "admin",
+    "emails" : [ 
+        {
+            "address" : "admin@admin.com",
+            "verified" : false
+        }
+    ],
+    "profile" : {
+        "name" : "admin"
+    }
 }
-
-/* 2 */
+// Producto 
+/* 1 */
 {
-    "_id" : "raeFFZepcFMDrowNL",
-    "categoria" : "software",
-    "office_enterprise" : "plus",
-    "Antivirus" : "norton"
-}
-
-/* 3 */
-{
-    "_id" : "AydoMEfveePRXXZA8",
-    "categoria" : "software",
-    "office_enterprise" : "premium",
-    "Antivirus" : "bitdefender"
-}
-
-/* 4 */
-{
-    "_id" : "Zj6nu3WTLra24mF24",
-    "categoria" : "software",
-    "office_enterprise" : "standar",
-    "Antivirus" : "esetnod32"
-}
-
-/* 5 */
-{
-    "_id" : "qHuWd6xrkMsAcWmkp",
-    "categoria" : "software",
-    "office_enterprise" : "premium",
-    "Antivirus" : "mcafree"
-}
-
-/* 6 */
-{
-    "_id" : "oeZRNMCCJJtfdyidr",
+    "_id" : "4K7YNtci94QZYtdNB",
     "categoria" : "computadora",
-    "id" : "bukgc",
-    "modelo" : "iohiohiug",
-    "procesador" : "jgikghik",
-    "sis_operat" : "jkh",
-    "Memory" : 3,
-    "Disco_duro" : 4,
-    "T_Pantalla" : 4
-}
-
-/* 7 */
+    "id" : "001",
+    "nombre" : "Computadora oficina",
+    "modelo" : "1",
+    "procesador" : "intel I9",
+    "sis_operat" : "linux",
+    "memoria" : 4,
+    "disco_duro" : "500",
+    "t_Pantalla" : "1025x800",
+    "proveedor" : "dcbmhABnMkLxsASNb",
+    "creado" : ISODate("2017-08-14T04:12:36.404Z")
+},
 {
-    "_id" : "fXAeiNy6DbB5o3zqw",
+    "_id" : "QvFnCBsQNqcfAGnRD",
     "categoria" : "impresora",
-    "id" : "jojo",
-    "marca" : "okokol;",
-    "funcionalidad" : "solofax",
-    "Conectividad" : "usb",
-    "tipo_impre" : "recargabletinta"
+    "id" : "100",
+    "nombre" : "Impresora oficina",
+    "marca" : "cannon",
+    "funcionalidad" : "multifuncional",
+    "conectividad" : "red",
+    "tipo_impresion" : "recargabletinta",
+    "proveedor" : "dcbmhABnMkLxsASNb",
+    "creado" : ISODate("2017-08-14T04:22:43.219Z")
+},
+{
+    "_id" : "aiTeGLMjRbTQaL9yq",
+    "categoria" : "software",
+    "lincencia" : "standar",
+    "nombre" : "bitdefender",
+    "proveedor" : "dcbmhABnMkLxsASNb",
+    "creado" : ISODate("2017-08-14T04:22:52.191Z")
+}
+// Inventario
+/* 1 */
+{
+    "_id" : "wqEjQW6ZFmgjhfEjS",
+    "id" : "900",
+    "categoria" : "computadora",
+    "nombre" : "4K7YNtci94QZYtdNB",
+    "cantidad" : 100,
+    "precio_unit" : 500,
+    "stock" : 5,
+    "descripcion" : "Computadora de oficina",
+    "proveedor" : "dcbmhABnMkLxsASNb",
+    "creado" : ISODate("2017-08-14T04:23:37.354Z")
+},
+{
+    "_id" : "MRZtTLFWMwx3uHnHs",
+    "id" : "901",
+    "categoria" : "impresora",
+    "nombre" : "QvFnCBsQNqcfAGnRD",
+    "cantidad" : 90,
+    "precio_unit" : 75,
+    "stock" : 5,
+    "descripcion" : "Impresora  economica",
+    "proveedor" : "dcbmhABnMkLxsASNb",
+    "creado" : ISODate("2017-08-14T04:24:02.993Z")
+},
+{
+    "_id" : "a5ntyHRwfonGWKFMy",
+    "id" : "902",
+    "categoria" : "software",
+    "nombre" : "aiTeGLMjRbTQaL9yq",
+    "cantidad" : 10,
+    "precio_unit" : 90,
+    "stock" : 10,
+    "descripcion" : "Proteccion a maximo nivel",
+    "proveedor" : "dcbmhABnMkLxsASNb",
+    "creado" : ISODate("2017-08-14T04:24:46.220Z")
 }

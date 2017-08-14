@@ -1,5 +1,6 @@
 import { Inventario } from '/imports/api/inventario/inventario.js';
 import { InventarioSchema } from '/imports/api/schemmas/esq_inventario.js';
+import { Productos } from '/imports/api/productos/productos.js';
 
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
@@ -29,6 +30,10 @@ Template.inventario.helpers({
   ProductoInfo() {
     return Session.get('info');
   },
+  NombreProducto(id) {
+    nombre = Productos.findOne({ '_id': id }).nombre;
+    return nombre;
+  }
 });
 
 Template.inventario.events({
@@ -63,6 +68,7 @@ AutoForm.hooks({
     onSuccess: function (formType, result) {
       if (result) {
         $('#ActualizarProducto').modal('hide');
+        Session.set('info', '');
         return false;
       }
     },
@@ -76,8 +82,10 @@ AutoForm.hooks({
   "InventarioAgregar": {
     // Called when any submit operation succeeds
     onSuccess: function (formType, result) {
-      $('#AgregarProducto').modal('hide');
-      return false;
+      if (result) {
+        $('#AgregarProducto').modal('hide');
+        return false;
+      }
     },
 
     // Called when any submit operation fails

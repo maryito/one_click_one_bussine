@@ -22,7 +22,7 @@
             <tr>
               <td>{{ id }}</td>
               <td>{{ categoria }}</td>
-              <td>{{ nombre }}</td>
+              <td>{{NombreProducto nombre }} </td>
               <td>{{ descripcion }}</td>
               <td>{{ cantidad }}</td>
               <td>{{ precio_unit }}</td>
@@ -44,7 +44,8 @@
     <div class="modal-dialog">
       <div class="modal-content center">
         <div class="modal-header login-header">
-          <button class="close" data-dismiss="modal">&times;</button> {{#if ProductoInfo}}
+          <button class="close" data-dismiss="modal">&times;</button> 
+          {{#if ProductoInfo}}
           <!--Actualizacion de producto  -->
           <h4 class="modal-title"> Actualizacion de Producto</h4>
           {{else}}
@@ -70,7 +71,8 @@
     <div class="modal-dialog">
       <div class="modal-content center">
         <div class="modal-header login-header">
-          <button class="close" data-dismiss="modal">&times;</button> {{#if ProductoInfo}}
+          <button class="close" data-dismiss="modal">&times;</button> 
+          {{#if ProductoInfo}}
           <!--Actualizacion de producto  -->
           <h4 class="modal-title"> Actualizacion de Producto</h4>
           {{else }}

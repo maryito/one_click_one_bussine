@@ -19,11 +19,11 @@ export const EmpresaProduc = new SimpleSchema({
     type: String,
     autoform: {
       options: [
-                { label: 'Dell', value: 'dell' },
-                { label: 'HP', value: 'hp' },
-                { label: 'ASUS', value: 'asus' },
-                { label: 'Lenovo', value: 'lenovo' },
-                { label: 'otro', value: 'otro' },
+        { label: 'Dell', value: 'dell' },
+        { label: 'HP', value: 'hp' },
+        { label: 'ASUS', value: 'asus' },
+        { label: 'Lenovo', value: 'lenovo' },
+        { label: 'otro', value: 'otro' },
       ],
     },
   },
@@ -61,12 +61,17 @@ export const Computadora = new SimpleSchema({
     label: 'Categoria',
     type: String,
     defaultValue: 'computadora',
+    autoform: { readonly: true },
   },
 
   id: {
     label: 'ID',
     type: String,
     max: 5,
+  },
+  nombre: {
+    type: String,
+    max: 30,
   },
 
   modelo: {
@@ -85,20 +90,32 @@ export const Computadora = new SimpleSchema({
     type: String,
     max: 30,
   },
-  Memory: {
+  memoria: {
     label: 'Memoria Ram',
     type: Number,
     max: 30,
   },
-  Disco_duro: {
+  disco_duro: {
     label: 'Disco Duro',
-    type: Number,
+    type: String,
     max: 5,
   },
-  T_Pantalla: {
+  t_Pantalla: {
     label: 'Dimension de Pantalla',
-    type: Number,
-    max: 5,
+    type: String,
+    max: 10,
+  },
+  proveedor: {
+    label: 'Proveedor',
+    type: String,
+    defaultValue: () => {
+      if (Meteor.isClient) {
+        return Meteor.userId();
+      } else {
+        return this._id;
+      }
+    },
+    autoform: { readonly: true },
   },
 });
 
@@ -108,36 +125,42 @@ export const Impresora = new SimpleSchema({
     label: 'Categoria',
     type: String,
     defaultValue: 'impresora',
+    autoform: { readonly: true },
   },
   id: {
     label: 'ID',
     type: String,
     max: 5,
   },
+  nombre: {
+    type: String,
+    max: 30,
+  },
   marca: {
     label: 'Marca de la Impresora',
     type: String,
     max: 30,
   },
+
   funcionalidad: {
     type: String,
     autoform: {
       options: [
-                { label: 'Multifuncional', value: 'multifuncional' },
-                { label: 'Solo Fax ', value: 'solofax' },
-                { label: 'Solo Escaner', value: 'soloescaner' },
-                { label: 'Fotocopiadora', value: 'fotocopiadora' },
-                { label: 'otro', value: 'otro' },
+        { label: 'Multifuncional', value: 'multifuncional' },
+        { label: 'Solo Fax ', value: 'solofax' },
+        { label: 'Solo Escaner', value: 'soloescaner' },
+        { label: 'Fotocopiadora', value: 'fotocopiadora' },
+        { label: 'otro', value: 'otro' },
       ],
     },
   },
-  Conectividad: {
+  conectividad: {
     type: String,
     autoform: {
       options: [
-                { label: 'Red', value: 'red' },
-                { label: 'Usb ', value: 'usb' },
-                { label: 'otro', value: 'otro' },
+        { label: 'Red', value: 'red' },
+        { label: 'Usb ', value: 'usb' },
+        { label: 'otro', value: 'otro' },
       ],
     },
   },
@@ -145,11 +168,23 @@ export const Impresora = new SimpleSchema({
     type: String,
     autoform: {
       options: [
-                { label: 'Laser', value: 'laser' },
-                { label: 'Recargable por Tinta ', value: 'recargabletinta' },
-                { label: 'otro', value: 'otro' },
+        { label: 'Laser', value: 'laser' },
+        { label: 'Recargable por Tinta ', value: 'recargabletinta' },
+        { label: 'otro', value: 'otro' },
       ],
     },
+  },
+  proveedor: {
+    label: 'Proveedor',
+    type: String,
+    defaultValue: () => {
+      if (Meteor.isClient) {
+        return Meteor.userId();
+      } else {
+        return this._id;
+      }
+    },
+    autoform: { readonly: true },
   },
 });
 
@@ -159,32 +194,44 @@ export const Software = new SimpleSchema({
     label: 'Categoria',
     type: String,
     defaultValue: 'software',
+    autoform: { readonly: true },
   },
 
-  office_enterprise: {
+  lincencia: {
     type: String,
     autoform: {
       options: [
-                { label: 'Standar', value: 'standar' },
-                { label: 'Plus', value: 'plus' },
-                { label: 'Premium', value: 'premium' },
-                { label: 'otro', value: 'otro' },
+        { label: 'Standar', value: 'standar' },
+        { label: 'Plus', value: 'plus' },
+        { label: 'Premium', value: 'premium' },
+        { label: 'otro', value: 'otro' },
       ],
     },
   },
-  Antivirus: {
+  nombre: {
     type: String,
     autoform: {
       options: [
-                { label: 'Bitdefender', value: 'bitdefender' },
-                { label: 'Kaspersky', value: 'kaspersky' },
-                { label: 'McAfee', value: 'mcafree' },
-                { label: 'Norton', value: 'norton' },
-                { label: 'Eset Nod32', value: 'esetnod32' },
-                { label: 'otro', value: 'otro' },
+        { label: 'Bitdefender', value: 'bitdefender' },
+        { label: 'Kaspersky', value: 'kaspersky' },
+        { label: 'McAfee', value: 'mcafree' },
+        { label: 'Norton', value: 'norton' },
+        { label: 'Eset Nod32', value: 'esetnod32' },
+        { label: 'otro', value: 'otro' },
       ],
     },
   },
-
+  proveedor: {
+    label: 'Proveedor',
+    type: String,
+    defaultValue: () => {
+      if (Meteor.isClient) {
+        return Meteor.userId();
+      } else {
+        return this._id;
+      }
+    },
+    autoform: { readonly: true },
+  },
 
 });

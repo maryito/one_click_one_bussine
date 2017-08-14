@@ -7,7 +7,13 @@ Meteor.publish('inventario', function inventario() {
   const empresaId = Meteor.userId();
   const nombre = Meteor.user().profile.name;
 
-  console.log("empresa a la que se va afiliar id: " + empresaId + " nombre "+ nombre);
-  return Inventario.find({ proveedor: empresaId });
+  console.log("empresa a la que se va afiliar id: " + empresaId + " nombre " + nombre);
+  if (nombre === "admin") {
+    return Inventario.find();
+
+  } else {
+    return Inventario.find({ proveedor: empresaId });
+
+  }
   // return Inventario.find();
 });

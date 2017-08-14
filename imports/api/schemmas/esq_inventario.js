@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 import { Productos } from '/imports/api/productos/productos.js';
-
+import { Random } from 'meteor/random'
 SimpleSchema.extendOptions(['autoform']);
 
 export const InventarioSchema = new SimpleSchema({
@@ -30,8 +30,9 @@ export const InventarioSchema = new SimpleSchema({
         firstOption: 'Seleccione el producto',
       },
       // options: () => Producto.find({ proveedor: "nombre del proveedor" }).map((obc) => (
-      options: () => Productos.find().map((obc) => (
-        { label: "Nombre: " + obc.nombre + " código: " + obc._id, value: '' + obc._id }))
+      options: () => Productos.find({ proveedor: Meteor.userId() }).map((obc) => (
+      // options: () => Productos.find().map((obc) => (
+        { label: " " + obc.nombre, value: '' + obc._id }))
     },
   },
 

@@ -10,8 +10,9 @@
         <table class="tb-producto table table-hover table-striped">
           <thead>
             <tr>
-              <th>Categoria </th>
               <th>ID </th>
+              <th>Categoria </th>
+              <th>Nombre</th>
               <th>Modelo</th>
               <th>Procesador</th>
               <th>Sistema Operativo</th>
@@ -23,14 +24,15 @@
           <tbody>
             {{#each productos}}
             <tr>
-              <td>{{ categoria }}</td>
               <td>{{ id }}</td>
+              <td>{{ categoria }}</td>
+              <td>{{ nombre }}</td>
               <td> {{ modelo }}</td>
               <td>{{ procesador }}</td>
               <td>{{ sis_operat }}</td>
-              <td>{{ Memory }}</td>
-              <td>{{ Disco_duro }}</td>
-              <td>{{ T_Pantalla }}</td>
+              <td>{{ memoria }}</td>
+              <td>{{ disco_duro }}</td>
+              <td>{{ t_Pantalla }}</td>
               <td>
                 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>
                 <a href="#" data-id="{{_id}}" id="eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
@@ -43,13 +45,14 @@
 
       <div class="row">
         <h1> Impresora</h1>
-       <button class="btn" id="CatImpre" data-toggle="modal" data-target="#AgregarImpres"><span class="glyphicon glyphicon-plus"></span> Impresora</button>
-       <hr>
+        <button class="btn" id="CatImpre" data-toggle="modal" data-target="#AgregarImpres"><span class="glyphicon glyphicon-plus"></span> Impresora</button>
+        <hr>
         <table class="tb-producto table table-hover table-striped">
           <thead>
             <tr>
               <th>Id</th>
               <th>Marca</th>
+              <th>Nombre</th>
               <th>Funcionalidad</th>
               <th>Conectividad</th>
               <th>Tipo de Impresion</th>
@@ -60,9 +63,10 @@
             <tr>
               <td>{{ id }}</td>
               <td>{{ marca }}</td>
+              <td>{{ nombre }}</td>
               <td>{{ funcionalidad }}</td>
-              <td>{{ Conectividad }}</td>
-              <td>{{ tipo_impre }}</td>
+              <td>{{ conectividad }}</td>
+              <td>{{ tipo_impresion }}</td>
               <td>
                 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>
                 <a href="#" data-id="{{_id}}" id="eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
@@ -81,15 +85,15 @@
         <table class="tb-producto table table-hover table-striped">
           <thead>
             <tr>
-              <th>Microsoft Office</th>
-              <th>Antivirus</th>
+              <th>Nombre</th>
+              <th>Tipo de lincencia</th>
             </tr>
           </thead>
           <tbody>
             {{#each productosSoft}}
             <tr>
-              <td>{{ office_enterprise }}</td>
-              <td>{{ Antivirus }}</td>
+              <td>{{ nombre }}</td>
+              <td>{{ lincencia }}</td>
 
               <td>
                 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#ActualizarProducto" id="editar"> <span class="glyphicon glyphicon-edit"></span></a>

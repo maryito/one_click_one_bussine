@@ -23,7 +23,12 @@ Meteor.methods({
       proveedor: String,
     });
     console.log(prod);
-    return Inventario.insert(prod);
+    _.extend(prod, {
+      creado: new Date(),
+    });
+
+    const estado = Inventario.insert(prod);
+    return estado;
   },
   'inventario.eliminar'(id) {
     check(id, String);
@@ -41,6 +46,9 @@ Meteor.methods({
       proveedor: String,
     });
     console.log(prod);
+    _.extend(prod, {
+      actualizado: new Date(),
+    });
     return Inventario.update({ "id": prod.id }, { $set: prod });
   },
 });
