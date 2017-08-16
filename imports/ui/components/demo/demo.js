@@ -14,13 +14,13 @@ Template.demo.helpers({
   },
   Schemas() {
     return ProdSchemas;
-  }
+  },
 });
 
 Template.demo.events({
   'submit .local-producto-add'(event) {
     event.preventDefault();
-    console.log("evento");
+    console.log('evento');
     const target = event.target;
     const nombre = target.nombre;
 
@@ -28,7 +28,7 @@ Template.demo.events({
       if (error) {
         alert(error.error);
       } else {
-        alert("agregado");
+        alert('agregado');
         nombre.value = '';
       }
     });

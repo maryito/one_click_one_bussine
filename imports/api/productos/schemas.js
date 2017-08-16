@@ -1,7 +1,7 @@
 import SimpleSchema from 'simpl-schema';
 SimpleSchema.extendOptions(['autoform']);
 
-export const ProdSchemas = new SimpleSchema({
+const ProdSchemas = new SimpleSchema({
     nombre: {
         type: String,
         max: 10,
@@ -31,3 +31,6 @@ export const ProdSchemas = new SimpleSchema({
     },
     
 });
+
+export { ProdSchemas };
+

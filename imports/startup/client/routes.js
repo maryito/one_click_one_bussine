@@ -34,3 +34,15 @@ FlowRouter.notFound = {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
   },
 };
+FlowRouter.route('/portal', {
+  name: 'App.portal',
+  action() {
+    BlazeLayout.render('App_body', { main: 'portal' });
+  },
+});
+FlowRouter.route('/ingresar', {
+  name: 'App.ingresar',
+  action() {
+    BlazeLayout.render('App_body', { main: 'ingreso' });
+  },
+});

@@ -4,6 +4,8 @@ Plataforma de inventarios autónomo con la integración de fabricantes, proveedo
 
 ### Información
 
+**ATENCIO!** Todos los documentos que desee subir guardarlos en la carpeta [private]
+
 **Nota:** Descargar git en su maquina para clonar el proyecto y instalar [Meteor](https://www.meteor.com/install).
 
 Para ejecutar el **proyecto** luego de clonarlo, Para bajara todas las depencia del proyecto:
@@ -29,19 +31,12 @@ git push
 ### cambiar de rama
 ```git checkout nombre_de_la_rama```
 ### Eliminar una rama 
-```git checkout -d nombre_de_la_rama```
+```git branch -d nombre_de_la_rama```
 
-[x]*Como ejecutar la web del fabricante **proximamente***
-Se Cambiaría a la rama fabricante
-```
-git checkout fabricante
-meteor --port 4500
-```
-
-[x]*Como ejecutar la web del proveedor **proximamente***
-Se Cambiaría a la rama fabricante
+[x]*Como ejecutar la web de inventario proveedor
+Se Cambiaría a la rama inventarios
 ``` 
-git checkout proveedor 
+git checkout inventarios 
 meteor --port 4000
 ```
 
