@@ -64,6 +64,18 @@ FlowRouter.route('/producto', {
   },
 });
 
+
+FlowRouter.route('/producto/:id', {
+  name: 'App.producto',
+  triggerEnter: [ () => {
+    console.log("producto inciianod");
+  }],
+  action( id, param ) {
+    console.log(id);
+    BlazeLayout.render('App_body', { main: 'producto' });
+  },
+});
+
 FlowRouter.route('/orden', {
   name: 'App.orden',
   action() {

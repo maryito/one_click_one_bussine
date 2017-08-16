@@ -1,6 +1,11 @@
 <template name="producto">
     <div class="row">
-        <h1>Producto</h1>
+        {{#each DataProducto}}
+        <h1>Producto {{ nombre }}</h1>
+
+        <p>
+            {{ nombre }} {{ categoria }} {{ precio_unit }}
+        </p>
+        {{/each}}
     </div>
-    {{> orden }}
 </template>
