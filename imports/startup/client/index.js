@@ -1,6 +1,7 @@
 // Import client startup through a single index entry point
 
 import './routes.js';
+import './loading.js';
 
 // import { accountsUIBootstrap3 } from 'meteor/ian:accounts-ui-bootstrap-3';
 import { Accounts } from 'meteor/accounts-base';

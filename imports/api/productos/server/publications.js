@@ -3,6 +3,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Productos } from '../productos.js';
 
-Meteor.publish('productos.all', function () {
-  return Productos.find();
-});
+// Meteor.publish('productos.all', function () {
+//   return Productos.find();
+// });

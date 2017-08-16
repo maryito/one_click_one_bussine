@@ -1,7 +1,5 @@
-import { Productos } from '/imports/api/productos/productos.js';
-import { Proveedores } from '/imports/api/productos/productos.js';
+import { Inventario } from '/imports/api/productos/productos.js';
 import { conexion } from '/imports/api/productos/conexiones.js';
-import { ProdSchemas } from '/imports/api/productos/schemas.js';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
@@ -10,83 +8,83 @@ import './portal.html';
 
 Template.portal.onCreated(function () {
   // Subscricion a productos del producto
-  conexion.subscribe('productos');
-  console.log(conexion.status().status);
-  Session.set('habilitar',false);
-  Session.set('portal', '');
-  Session.set('recomendacion', { tiempo: 0, precio: 0 });
+  // conexion.subscribe('productos');
+  // conexion.subscribe('inventario.portal');
+  // console.log(conexion.status().status);
+  // Session.set('habilitar', false);
+  // Session.set('portal', '');
+  // Session.set('recomendacion', { tiempo: 0, precio: 0 });
+  // con meteor chet
+  let template = Template.instance();
+
+  template.busarConsulta = new ReactiveVar();
+  template.buscando = new ReactiveVar(false);
+  template.filtros = new ReactiveVar();
+
+  template.autorun(() => {
+    conexion.subscribe('inventario.portal', template.busarConsulta.get(), () => {
+      setTimeout(() => {
+        template.buscando.set(false);
+      }, 300);
+    })
+  })
 });
 
 Template.portal.helpers({
-  Schemas() {
-    return ProdSchemas;
+  buscando() {
+    return Template.instance().buscando.get();
   },
-  MostrarProductos() {
-    const estado = Session.get('habilitar');
-      return estado;
+  consulta() {
+    return Template.instance().busarConsulta.get();
   },
-  productos() {
-    data = Session.get('portal');
-    if (data) {
-      console.log('Producto a filtrar: '+data);
-
-      // cant = Number(data.cantidad)
-      // productos = Proveedores.find({ 'nombre': data.nombre, 'cantidad': { $gt: cant } });
-      productos = Proveedores.find({ 'nombre': data});
-
-      let tiempo = Session.get('recomendacion').tiempo;
-      let precio = Session.get('recomendacion').precio;
-
-      datos = { precios: [], tiempos:[]};
-
-      productos.forEach((i) => {
-        tim = i.tiempo;
-        prec = i.precio;
-        
-        datos.precios.push(prec);
-        datos.tiempos.push(tim);
-      })
-      console.log(datos);
-
-      prec = Math.min.apply(Math, datos.precios);
-      timp = Math.min.apply(Math, datos.tiempos);
-      console.log(prec, timp);
-
-      index =  datos.tiempos.indexOf(Number(timp))
-      index2 =  datos.precios.indexOf(Number(prec))
-      if ( index === index2) {
-        console.log(" recomendar proveedor");
-      }else {
-        alert("Ups! seleccion la preferencia")
-      }
-      // console.log("Posicion", posision, posision2);
-      // Logica si la recomendacion es del mismo proveedor recomendar. Sino mensaje de alertas
-
-
-      return productos
-      // return Productos.find({ 'producto.nombre': data.nombre, 'producto.cantidad': { $gt: data.cantidad} });
-    } else {
-      return Proveedores.find({});
+  inventario() {
+    let filtro = Template.instance().filtros.get();
+    let precio = 0;
+    let tiempo = 0;
+    let marca = 0;
+    let fecha = 0;
+    if(filtro === 'tiempo') {
+      tiempo = 1;
+    }else if(filtro === 'marca') {
+      marca = 1;
+    } else if(filtro === 'precio') {
+      precio = 1;
     }
-  },
-  recomendado() {
-    return Session.get('portal');
+    let proyection = {
+      sort: { precio_unit: precio }
+    }
+    let resultado = "";
+    resultado = Inventario.find({});
+    // console.log("resultado .. " + resultado);
+    if (resultado) {
+      return resultado;
+    }
   },
 });
 
 Template.portal.events({
-  'click .form-producto'(events, template) {
-    events.preventDefault();
-    Session.set('habilitar',true);
-    
-    console.log("evento");
+  'keyup [name="buscar"]' (event, template) {
+    let valor = event.target.value.trim();
 
-    // Obtener el valor del producto
-    data = template.find("#nombre_buscar").value;
+    if (valor !== '' && event.keyCode === 13 ) {
+      template.busarConsulta.set(valor);
+      template.buscando.set(true);
+    }
 
-    // asignamos a una variable global
-    Session.set('portal', data)
-
-    console.log("Buscando", data);
+    if (valor === '') {
+      template.busarConsulta.set(valor);
+    }
+  },
+  'click .fl-tiempo'(event, template) {
+    template.filtros.set('tiempo');
+    console.log("Filtrando por tiempo");
+  },
+  'click .fl-precio'(event, template) {
+    template.filtros.set('precio');
+    console.log("Filtrando por precio");
+  },
+  'click .fl-marca'(event, template) {
+    template.filtros.set('marca');
+    console.log("Filtrando por marca");
   }
 })

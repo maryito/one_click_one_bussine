@@ -1,4 +1,4 @@
-<template name="portal">
+<template name="portalmod">
   <div class="container">
     <h1>PORTAL DE PRODUCTOS</h1>
     <hr>
@@ -33,21 +33,24 @@
           <session class="sidebar">
             <p class="lead">RECOMENDACION</p>
           </session>
-          <button class="btn btn-default"> Mas resultados</button> 
+          <button class="btn btn-default"> Mas resultados</button>
 
         </aside>
         {{else}}
         <h2>listado de productos</h2>
-        {{#each productos}}
+        {{#each inventario}}
         <div class="producto col-xs-4 col-lg-4">
           <div class="thumbnail">
             <div class="caption">
               <h4> {{nombre}} </h4>
               <p>
                 <!-- {{ producto.proveedor }} -->
-                <b>Cantidad:</b> {{ cantidad }}
+                <b>Categoria:</b> {{ categoria }}
+                <b>Disponible:</b> {{ cantidad }}
                 <b>Proveedor:</b> {{ proveedor }}
-                <b>Marca:</b> {{ marca }}
+                <b>Precio: $</b> {{ precio_unit }}
+                <hr>
+                <b>Descripción: $</b> {{ descripcion }}
                 <hr>
                 <b>Tiempo de entrega:</b> {{ tiempo }} Días
                 <!-- logica de cuando singulares y plurales  -->
@@ -65,8 +68,7 @@
         </div>
         {{/each}}
 
-        <button class="btn btn-default"> Mas resultados</button> 
-        {{/if}}
+        <button class="btn btn-default"> Mas resultados</button> {{/if}}
       </div>
     </div>
     <!-- {{else}} -->
@@ -76,6 +78,79 @@
       </div>
     </div>
     <!-- {{/if}} -->
+  </div>
+
+
+
+</template>
+
+<template name="portal">
+  <div class="container">
+    <h1>PORTAL DE PRODUCTOS</h1>
+    <hr>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="input-group input-group-lg">
+          <input type="text" id="nombre_buscar" class="form-control" name="buscar" placeholder="Buscar producto...">
+          <span class="input-group-btn">
+             <button class="btn btn-default form-producto" type="button"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <br> {{#if buscando }} {{> loading}} {{else}}
+    <div class="row">
+      {{#if inventario}}
+      <div class="col-md-2">
+        <aside class="main-sidebar">
+          <session class="sidebar">
+            <p class="lead"> Filtros</p>
+            <div class="list-group">
+              <a class="fl-tiempo list-group-item">Tiempo</a>
+              <a class="fl-precio list-group-item">Precio</a>
+              <a class="fl-marca list-group-item">Marca</a>
+            </div>
+          </session>
+        </aside>
+      </div>
+      {{/if}}
+      <div class="col-md-10">
+        {{#if inventario}}
+        <h2>listado de productos disponible</h2>
+        {{/if}}
+        {{#each inventario}}
+        <div class="producto col-xs-4 col-lg-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4> {{nombre}} </h4>
+              <p>
+                <!-- {{ producto.proveedor }} -->
+                <b>Categoria:</b> {{ categoria }}
+                <b>Disponible:</b> {{ cantidad }}
+                <b>Proveedor:</b> {{ proveedor }}
+                <hr>
+                <b>Descripción: </b> {{ descripcion }}
+                <hr>
+                <b>Tiempo de entrega:</b> {{ tiempo }} Días
+                <!-- logica de cuando singulares y plurales  -->
+              </p>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p class="lead">$ {{ precio_unit }}</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{else}}
+        <p class="alert alert-warning">No se encontró nada para {{consulta}}. Lo sentimos, {{empresa}} </p>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
   </div>
 
 
