@@ -58,8 +58,15 @@ FlowRouter.route('/ingresar', {
 
 
 FlowRouter.route('/producto', {
-  name: 'App.fabricante',
+  name: 'App.producto',
   action() {
     BlazeLayout.render('App_body', { main: 'producto' });
+  },
+});
+
+FlowRouter.route('/orden', {
+  name: 'App.orden',
+  action() {
+    BlazeLayout.render('App_body', { main: 'orden' });
   },
 });
