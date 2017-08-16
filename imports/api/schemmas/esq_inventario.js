@@ -22,7 +22,7 @@ export const InventarioSchema = new SimpleSchema({
     },
   },
 
-  nombre: {
+  nombreId: {
     label: 'Nombre del producto',
     type: String,
     autoform: {
@@ -31,11 +31,22 @@ export const InventarioSchema = new SimpleSchema({
       },
       // options: () => Producto.find({ proveedor: "nombre del proveedor" }).map((obc) => (
       options: () => Productos.find({ proveedor: Meteor.userId() }).map((obc) => (
-      // options: () => Productos.find().map((obc) => (
+        // options: () => Productos.find().map((obc) => (
         { label: " " + obc.nombre, value: '' + obc._id }))
     },
   },
-
+  nombre: {
+    type: String,
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        type: "hidden"
+      },
+      afFormGroup: {
+        label: false
+      }
+    },
+  },
   cantidad: {
     label: 'Cantidad de productos',
     type: Number,
@@ -62,13 +73,31 @@ export const InventarioSchema = new SimpleSchema({
     label: 'Proveedor',
     type: String,
     defaultValue: () => {
-      if (Meteor.isClient) {
-        return Meteor.userId();
-      } else {
-        return this._id;
+      if (Meteor.isClient && Meteor.user()) {
+        return Meteor.user().profile.name;
       }
     },
-    autoform: { readonly: true },
+    autoform: {
+      afFieldInput: {
+        type: "hidden"
+      },
+      afFormGroup: {
+        label: false
+      }
+    },
+  },
+  proveedorId: {
+    type: SimpleSchema.RegEx.Id,
+    defaultValue: Meteor.userId(),
+    autoform: {
+      afFieldInput: {
+        type: "hidden"
+      },
+      afFormGroup: {
+        label: false
+      }
+    }
+    // autoform: { readonly: true },
   },
 
 });

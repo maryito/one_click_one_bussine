@@ -1,7 +1,14 @@
 import SimpleSchema from 'simpl-schema';
 
 SimpleSchema.extendOptions(['autoform']);
-
+SimpleSchema.setDefaultMessages({
+  initialLanguage: 'es',
+  messages: {
+    es: {
+      uploadError: '{{value}}', //File-upload
+    },
+  }
+});
 export const EmpresaProduc = new SimpleSchema({
   id: {
     label: 'ID',
@@ -117,6 +124,16 @@ export const Computadora = new SimpleSchema({
     },
     autoform: { readonly: true },
   },
+  // picture: {
+  //   label: " subir imagen",
+  //   type: String,
+  //   autoform: {
+  //     afFieldInput: {
+  //       type: 'fileUpload',
+  //       collection: 'Images',
+  //     },
+  //   },
+  // },
 });
 
 export const Impresora = new SimpleSchema({

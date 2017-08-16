@@ -1,5 +1,6 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { Meteor } from 'meteor/meteor';
 
 // Import needed templates
 import '../../ui/layouts/body/body.js';
@@ -8,6 +9,21 @@ import '../../ui/pages/not-found/not-found.js';
 // Agregamos el componente de barra de navegacion
 import '../../ui/pages/navegacion/navegacion.js';
 
+// Validaciones de uusario
+
+const verificarLogin = () => {
+  if (!Meteor.userId()){
+    redirect('/');
+  }
+};
+
+// redirigir a un usuario autentico
+
+const redirigirLogin = () => {
+  if (Meteor.userId()){
+    redirect('/portal');
+  }
+};
 // Set up all routes in the app
 FlowRouter.route('/', {
   name: 'App.home',
@@ -21,6 +37,7 @@ FlowRouter.route('/ordenes', {
   action() {
     BlazeLayout.render('App_body', { main: 'ordenes' });
   },
+  triggersEnter: [verificarLogin],
 });
 
 FlowRouter.route('/inventario', {

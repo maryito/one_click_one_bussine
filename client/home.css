@@ -544,9 +544,7 @@ header {
     position: relative;
     
 }
-.modal{
-    top: 20%; 
-}
+
 .modal-header .close {
     margin-top: 2px;
 }

@@ -126,8 +126,11 @@
           {{> quickForm doc=ProductoInfo buttonContent="Actualizar" schema=Schemas id="ProductoActualizar" type="method" meteormethod="productos.actualizar"}}
           {{else}}
           <!--Form Producto nuevo  -->
-          {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas type="method" meteormethod="productos.agregar2"
-          id="ProductoAgregar"}} {{/if}}
+          <!-- {{> quickForm buttonContent="Agregar" buttonClasses="add-project" schema=Schemas type="method" meteormethod="productos.agregar2"
+          id="ProductoAgregar"}} -->
+          {{> uploadForm}}          <!--  -->
+          {{/if}}
+          
         </div>
       </div>
       <div class="modal-footer">
@@ -190,3 +193,12 @@
     </div>
   </div>
 </template>
+
+<template name="uploadForm">
+    {{#with currentUpload}}
+      Uploading <b>{{file.name}}</b>:
+      <span id="progress">{{progress.get}}%</span>
+    {{else}}
+      <input id="fileInput" type="file" />
+    {{/with}}
+  </template>
