@@ -1,3 +1,12 @@
-<template name="ingreso"> 
-    {{>register}}
+<template name="ingreso">
+    <div class="container-fluid">
+            {{>register}}
+            {{>login}}
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
+            <button type="button" id="btn-registro" class="btn btn-primary btn-lg"> REGISTRARSE </button>
+            <button type="button" id="btn-ingresar" class="btn btn-primary btn-lg"> INGRESAR </button>
+        </div>    
+    </div> 
+    
+    {{>pie}}
 </template>

@@ -43,6 +43,10 @@
     -o-transform: scale(1.1);
 }
 
+    .item{
+        height: 470px;
+    }
+
     .item > img{
         width: 500px;
     }
@@ -324,4 +328,29 @@ span.input-group-addon i {
 .footer-bottom p.pull-left {
     padding-top: 6px;
     
+}
+
+.body-register{
+    display: none;
+    background-color: #004d82;
+}
+
+.body-login{
+    display: none;
+    background-color: #004d82;
+}
+
+.bg-grey{
+    background-color: #f6f6f6;
+}
+.jum { 
+    background-color: #00aaff;
+    color: #000000;
+    padding: 100px 25px;
+}           
+.flu {
+    padding: 60px 50px;
+}
+.log {
+    font-size: 200px;
 }
