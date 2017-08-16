@@ -1,91 +1,122 @@
-<template name="portalmod">
+<template name="central">
   <div class="container">
-    <h1>PORTAL DE PRODUCTOS</h1>
-    <hr>
+    {{#if usercurrent}}
+    <!-- Portal de busqueda -->
+    {{> portal}}
+    <!-- Fin del protal -->
+    {{else}}
     <div class="row">
-      <div class="col-xs-8 col-xs-offset-2">
-        <div class="input-group input-group-lg">
-          <input type="text" id="nombre_buscar" class="form-control" name="producto" value="Laptop" placeholder="Buscar producto...">
-          <span class="input-group-btn">
-             <button class="btn btn-default form-producto" type="button"><span class="glyphicon glyphicon-search"></span></button>
-          </span>
-        </div>
+      <h1>Bienvenido inicie sesion o registrese</h1>
+      <div class="col-md-6">
+        <!-- Inicio de session -->
+        {{> login}}
+      </div>
+      <div class="col-md-6">
+        <!-- Registro de empres -->
+        {{> register}}
       </div>
     </div>
-    <br>
-    <!-- {{#if MostrarProductos }} -->
-    <div class="row">
-      <div class="col-md-2">
-        <aside class="main-sidebar">
-          <session class="sidebar">
-            <p class="lead"> Filtros</p>
-            <div class="list-group">
-              <a href="#" class="list-group-item">Tiempo</a>
-              <a href="#" class="list-group-item">Precio</a>
-              <a href="#" class="list-group-item">Marca</a>
-            </div>
-          </session>
-        </aside>
-      </div>
-      <div class="col-md-10">
-        {{#if recomendado}}
-        <aside class="main-sidebar">
-          <session class="sidebar">
-            <p class="lead">RECOMENDACION</p>
-          </session>
-          <button class="btn btn-default"> Mas resultados</button>
+    {{/if}}
+  </div>
+</template>
 
-        </aside>
-        {{else}}
-        <h2>listado de productos</h2>
-        {{#each inventario}}
-        <div class="producto col-xs-4 col-lg-4">
-          <div class="thumbnail">
-            <div class="caption">
-              <h4> {{nombre}} </h4>
-              <p>
-                <!-- {{ producto.proveedor }} -->
-                <b>Categoria:</b> {{ categoria }}
-                <b>Disponible:</b> {{ cantidad }}
-                <b>Proveedor:</b> {{ proveedor }}
-                <b>Precio: $</b> {{ precio_unit }}
-                <hr>
-                <b>Descripción: $</b> {{ descripcion }}
-                <hr>
-                <b>Tiempo de entrega:</b> {{ tiempo }} Días
-                <!-- logica de cuando singulares y plurales  -->
-              </p>
-              <div class="row">
-                <div class="col-xs-12 col-md-6">
-                  <p class="lead">$ {{ precio }}</p>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                  <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                </div>
+<!-- template de login -->
+<template name="login">
+  <!-- <div class="container">
+    <div class="row"> -->
+      <div class="col-sm-6 col-md-8 col-md-offset-2">
+        <div class="account-wall">
+          <img class="profile-img" src="/img/one-click-login.png" alt="">
+          <h3 align="center">OneClick</h3>
+          <form class="form-signin">
+            <input type="text" class="form-control" placeholder="Correo" required autofocus>
+            <input type="password" class="form-control" placeholder="Contraseña" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Sign in</button>
+            <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    <div class="check">Recuerdame</div>
+                </label>
+            <a href="#" class="pull-right need-help">¿Necesitas ayuda? </a><span class="clearfix"></span>
+          </form>
+        </div>
+        <a href="#" class="text-center new-account">Registrate</a>
+      </div>
+    <!-- </div>
+  </div> -->
+</template>
+
+<!-- template de registro -->
+<template name="register">
+    <!-- <div class="row main"> -->
+    <div class="col-md-12">
+      <div class="main-login main-center">
+        <form class="" method="post" action="#">
+
+          <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Nombre</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Ingresar nombre" />
               </div>
             </div>
           </div>
-        </div>
-        {{/each}}
 
-        <button class="btn btn-default"> Mas resultados</button> {{/if}}
+          <div class="form-group">
+            <label for="email" class="cols-sm-2 control-label">Correo</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="email" id="email" placeholder="Ingresar correo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username" class="cols-sm-2 control-label">usuario</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Ingresar usuario" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Ingresar contraseña" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm" class="cols-sm-2 control-label">Confirmar contraseña</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirmar contraseña" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group ">
+            <a href="" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Registrar</a>
+          </div>
+
+        </form>
       </div>
-    </div>
-    <!-- {{else}} -->
-    <div class="row">
-      <div class="col-md-12">
-        <h1> Agregar informacion.....</h1>
-      </div>
-    </div>
-    <!-- {{/if}} -->
+ 
   </div>
-
-
 
 </template>
 
+<!-- template de busquedad -->
 <template name="portal">
-  <div class="container">
+
     <h1>PORTAL DE PRODUCTOS</h1>
     <hr>
     <div class="row">
@@ -117,8 +148,7 @@
       <div class="col-md-10">
         {{#if inventario}}
         <h2>listado de productos disponible</h2>
-        {{/if}}
-        {{#each inventario}}
+        {{/if}} {{#each inventario}}
         <div class="producto col-xs-4 col-lg-4">
           <div class="thumbnail">
             <div class="caption">
@@ -151,8 +181,5 @@
       </div>
     </div>
     {{/if}}
-  </div>
-
-
-
 </template>
+

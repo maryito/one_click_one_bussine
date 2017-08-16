@@ -1,0 +1,128 @@
+[
+  {
+    "id": "soky10",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "-nvo- (tmks-030) antivirus kaspersky internet security 2012.",
+    "detalle.precio": 389.12,
+    "detalle.licencia": "1 usuario / 1 año",
+    "detalle.imagen": "soky10.jpg"
+  },
+  {
+    "id": "soky28",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "(tmks-037) antivirus kaspersky one universal security",
+    "detalle.precio": 967.89,
+    "detalle.licencia": "5 usuarios /1año",
+    "detalle.imagen": "soky28.jpg"
+  },
+  {
+    "id": "sono53157",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "(20053157) norton int. security 2010 esp 1 user usb (para netbook)",
+    "detalle.precio": 413.55,
+    "detalle.licencia": "6 usuarios /1año",
+    "detalle.imagen": "sono53157.jpg"
+  },
+  {
+    "id": "sotp2",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "(tpav-usb+dt112w/4gbcl) software antivirus trustport portatil usb incluye usb 4gb+promo",
+    "detalle.precio": 238.36,
+    "detalle.licencia": "7 usuarios /1año",
+    "detalle.imagen": "sotp2.jpg"
+  },
+  {
+    "id": "sotp6",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "(iso1b1p001xx3) licencia trust port internet security 2011 oem",
+    "detalle.precio": 748.18,
+    "detalle.licencia": "3 seriales act -1 año",
+    "detalle.imagen": "sotp6.jpg"
+  },
+  {
+    "id": "somi00406",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "(t5d-00406) software office home & business 2010 32-bit/x64 español",
+    "detalle.precio": 2273.1,
+    "detalle.licencia": "4 seriales act -1 año",
+    "detalle.imagen": "somi00406.jpg"
+  },
+  {
+    "id": "somi01542",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "(9qa-01542) software microsoft oem office sb 2007 w32",
+    "detalle.precio": 2864.02,
+    "detalle.licencia": "5 seriales act -1 año",
+    "detalle.imagen": "somi01542.gpg"
+  },
+  {
+    "id": "somi01185",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "(fqc-00750/fqc-04635)sist. operativo windows 7 professional, 32bit, español, oem",
+    "detalle.precio": 1920.35,
+    "detalle.licencia": "6 seriales act -1 año",
+    "detalle.imagen": "somi01185.jpg"
+  },
+  {
+    "id": "somi00103",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "(gjc-00390/gjc-00573/gjc-00599)sist.operativo windows 7 starter,32bit,españo",
+    "detalle.precio": 44.39,
+    "detalle.licencia": "7 seriales act -1 año",
+    "detalle.imagen": "somi00103.jpg"
+  },
+  {
+    "id": "sotp19",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "licencia trust port basico 2012 oem",
+    "detalle.precio": 172.5,
+    "detalle.licencia": "10 seriales 2 engines",
+    "detalle.imagen": "sotp19.jpg"
+  },
+  {
+    "id": "wsomi03267",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "18m (79g-03267) office home and stud 2010 bdl con mouse 32-bit/x64 spanish",
+    "detalle.precio": 176,
+    "detalle.licencia": "1 usuario / 1 año",
+    "detalle.imagen": "wsomi03267.jpg"
+  },
+  {
+    "id": "sotp15",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "(fs01b11p001bxx) licencia trustport antivirus basico para servidor 2012 2 engines win 2k",
+    "detalle.precio": 298,
+    "detalle.licencia": "2 usuario / 1 año",
+    "detalle.imagen": "sotp15.jpg"
+  },
+  {
+    "id": "soky9",
+    "categoria": "software",
+    "nombre": "antivirus",
+    "detalle.descripción": "-nvo- (tmks-029) antivirus kaspersky 2012.",
+    "detalle.precio": 1168.56,
+    "detalle.licencia": "10 usuarios / 1 año",
+    "detalle.imagen": "soky9.jpg"
+  },
+  {
+    "id": "promo3",
+    "categoria": "software",
+    "nombre": "microsoft office",
+    "detalle.descripción": "(somi00184+prine3400) sist. operativo w7 home basic, oem + procesador intel cel. dc 3400",
+    "detalle.precio": 1416.78,
+    "detalle.licencia": "10 usuarios / 1 año",
+    "detalle.imagen": "promo3.jpg"
+  }
+]

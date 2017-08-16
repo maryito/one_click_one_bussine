@@ -41,3 +41,9 @@ FlowRouter.route('/portal', {
     BlazeLayout.render('App_body', { main: 'portal' });
   },
 });
+FlowRouter.route('/ingresar', {
+  name: 'App.ingresar',
+  action() {
+    BlazeLayout.render('App_body', { main: 'ingreso' });
+  },
+});

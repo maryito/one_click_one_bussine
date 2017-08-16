@@ -1,0 +1,101 @@
+origen ,destinos ,dias 
+panama,colon ,1
+panama,cocle,2
+panama,chiriqui,5
+panama,herrera,3
+panama,bocas del toro,5
+panama,los santos ,3
+panama,darien ,4
+panama,veraguas ,3
+panama,chorrera ,1
+panama,panama,1
+colon ,colon ,1
+colon ,cocle,2
+colon ,chiriqui,5
+colon ,herrera,3
+colon ,bocas del toro,5
+colon ,los santos ,3
+colon ,darien ,4
+colon ,veraguas ,3
+colon ,chorrera ,1
+colon ,panama,1
+cocle,colon ,1
+cocle,cocle,2
+cocle,chiriqui,5
+cocle,herrera,3
+cocle,bocas del toro,5
+cocle,los santos ,3
+cocle,darien ,4
+cocle,veraguas ,3
+cocle,chorrera ,1
+cocle,panama,1
+chiriqui,colon ,1
+chiriqui,cocle,2
+chiriqui,chiriqui,5
+chiriqui,herrera,3
+chiriqui,bocas del toro,5
+chiriqui,los santos ,3
+chiriqui,darien ,4
+chiriqui,veraguas ,3
+chiriqui,chorrera ,1
+chiriqui,panama,1
+herrera,colon ,1
+herrera,cocle,2
+herrera,chiriqui,5
+herrera,herrera,3
+herrera,bocas del toro,5
+herrera,los santos ,3
+herrera,darien ,4
+herrera,veraguas ,3
+herrera,chorrera ,1
+herrera,panama,1
+bocas del toro,colon ,1
+bocas del toro,cocle,2
+bocas del toro,chiriqui,5
+bocas del toro,herrera,3
+bocas del toro,bocas del toro,5
+bocas del toro,los santos ,3
+bocas del toro,darien ,4
+bocas del toro,veraguas ,3
+bocas del toro,chorrera ,1
+bocas del toro,panama,1
+los santos ,colon ,1
+los santos ,cocle,2
+los santos ,chiriqui,5
+los santos ,herrera,3
+los santos ,bocas del toro,5
+los santos ,los santos ,3
+los santos ,darien ,4
+los santos ,veraguas ,3
+los santos ,chorrera ,1
+los santos ,panama,1
+darien,colon ,1
+darien,cocle,2
+darien,chiriqui,5
+darien,herrera,3
+darien,bocas del toro,5
+darien,los santos ,3
+darien,darien ,4
+darien,veraguas ,3
+darien,chorrera ,1
+darien,panama,1
+veraguas ,colon ,1
+veraguas ,cocle,2
+veraguas ,chiriqui,5
+veraguas ,herrera,3
+veraguas ,bocas del toro,5
+veraguas ,los santos ,3
+veraguas ,darien ,4
+veraguas ,veraguas ,3
+veraguas ,chorrera ,1
+veraguas ,panama,1
+veraguas ,colon ,1
+chorrera,cocle,2
+chorrera,chiriqui,5
+chorrera,herrera,3
+chorrera,bocas del toro,5
+chorrera,los santos ,3
+chorrera,darien ,4
+chorrera,veraguas ,3
+chorrera,chorrera ,1
+chorrera,panama,1

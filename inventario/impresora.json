@@ -1,0 +1,152 @@
+[
+  {
+    "id": "imept22",
+    "categoria": "impresora",
+    "nombre": "t22",
+    "marca": "epson",
+    "detalle.descripción": "epson stylus t22",
+    "detalle.precio": 455.4,
+    "detalle.cantidad": 100,
+    "detalle.imagen": "imept22.jpg"
+  },
+  {
+    "id": "imept50",
+    "categoria": "impresora",
+    "nombre": "t50",
+    "marca": "epson",
+    "detalle.descripción": "epson stylus photo t50",
+    "detalle.precio": 2300.61,
+    "detalle.cantidad": 50,
+    "detalle.imagen": "imept50.jpg"
+  },
+  {
+    "id": "imeptx130",
+    "categoria": "impresora",
+    "nombre": "tx130",
+    "marca": "epson",
+    "detalle.descripción": "stylus multifuncional tx130  5760 x 1440 dpi usb",
+    "detalle.precio": 656.3,
+    "detalle.cantidad": 100,
+    "detalle.imagen": "imeptx130.jpg"
+  },
+  {
+    "id": "imsa2165w",
+    "categoria": "impresora",
+    "nombre": "2165w",
+    "marca": "samsung",
+    "detalle.descripción": "samsung ml-2165w monocromatica 20ppm inalambrica",
+    "detalle.precio": 935.11,
+    "detalle.cantidad": 50,
+    "detalle.imagen": "imsa2165w.jpg"
+  },
+  {
+    "id": "imsa3185",
+    "categoria": "impresora",
+    "nombre": 3185,
+    "marca": "samsung",
+    "detalle.descripción": "multifuncional samsung laser  color 4/17ppm ngr/1200dpi",
+    "detalle.precio": 3871.84,
+    "detalle.cantidad": 51,
+    "detalle.imagen": "imsa3185.jpg"
+  },
+  {
+    "id": "imsa3310",
+    "categoria": "impresora",
+    "nombre": "3310nd",
+    "marca": "samsung",
+    "detalle.descripción": "samsung laser ml3310nd 33 ppm 1200 x",
+    "detalle.precio": 2737.41,
+    "detalle.cantidad": 101,
+    "detalle.imagen": "imsa3310.jpg"
+  },
+  {
+    "id": "imsa365w",
+    "categoria": "impresora",
+    "nombre": "365w",
+    "marca": "samsung",
+    "detalle.descripción": "samsung clp-365w laser color  19 ppm neg/ 4 ppm color wireless, usb",
+    "detalle.precio": 2004.12,
+    "detalle.cantidad": 51,
+    "detalle.imagen": "imsa365w.jpg"
+  },
+  {
+    "id": "imsaml2165",
+    "categoria": "impresora",
+    "nombre": "ml-2165w",
+    "marca": "samsung",
+    "detalle.descripción": "laser samsung  ml-2165, mono 1200x1200 dpi, 21ppm",
+    "detalle.precio": 592.97,
+    "detalle.cantidad": 52,
+    "detalle.imagen": "imsaml2165.jpg"
+  },
+  {
+    "id": "imsascx3405",
+    "categoria": "impresora",
+    "nombre": "cx3405",
+    "marca": "samsung",
+    "detalle.descripción": "multifuncional laser 21pp/1200x1200/4800 usb memoria 64mb",
+    "detalle.precio": 1321.15,
+    "detalle.cantidad": 102,
+    "detalle.imagen": "imsascx3405.jpg"
+  },
+  {
+    "id": "imhp1102w",
+    "categoria": "impresora",
+    "nombre": "p1102w",
+    "marca": "hp",
+    "detalle.descripción": "laserjet pro p1102w 19ppm 8mb wifi, hp e-print, apple air-print,",
+    "detalle.precio": 1177,
+    "detalle.cantidad": 52,
+    "detalle.imagen": "imhp1102w.jpg"
+  },
+  {
+    "id": "imhp114",
+    "categoria": "impresora",
+    "nombre": "hp 114",
+    "marca": "hp",
+    "detalle.descripción": "e-all-in-one hp envy 114 30/25 ppm wireless se conecta a la web, pantalla tactil",
+    "detalle.precio": 1789,
+    "detalle.cantidad": 53,
+    "detalle.imagen": "imhp114.jpg"
+  },
+  {
+    "id": "imhp2050",
+    "categoria": "impresora",
+    "nombre": "deskjet2050",
+    "marca": "hp",
+    "detalle.descripción": "multifuncional hp 2050 deskjet 20n/16c ppm",
+    "detalle.precio": 579,
+    "detalle.cantidad": 103,
+    "detalle.imagen": "imhp2050.jpg"
+  },
+  {
+    "id": "imhp3680",
+    "categoria": "impresora",
+    "nombre": "hp3680",
+    "marca": "hp",
+    "detalle.descripción": "mutifuncional hp officejet 3680 bond",
+    "detalle.precio": 967.95,
+    "detalle.cantidad": 53,
+    "detalle.imagen": "imhp3680.jpg"
+  },
+  {
+    "id": "imhp4000",
+    "categoria": "impresora",
+    "nombre": "hp4000",
+    "marca": "hp",
+    "detalle.descripción": "impresora hp officejet 4000",
+    "detalle.precio": 521.25,
+    "detalle.cantidad": 54,
+    "detalle.imagen": "imhp4000.jpg"
+  },
+  {
+    "id": "imhp4500",
+    "categoria": "impresora",
+    "nombre": "hp4500",
+    "marca": "hp",
+    "detalle.descripción": "multifuncional officejet hp 4500",
+    "detalle.precio": 719,
+    "detalle.cantidad": 104,
+    "detalle.imagen": "imhp4500.jpg"
+  }
+]
