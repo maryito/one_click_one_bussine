@@ -24,17 +24,25 @@ FlowRouter.route('/inicio', {
   },
 });
 
-FlowRouter.route('/producto', {
-  name: 'App.fabricante',
-  action() {
-    BlazeLayout.render('App_body', { main: 'producto' });
-  },
-});
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
   },
 };
+
+FlowRouter.route('/contacto', {
+  name: 'App.contacto',
+  action() {
+    BlazeLayout.render('App_body', { main: 'contacto' });
+  },
+});
+
+FlowRouter.route('/conocenos', {
+  name: 'App.conocenos',
+  action() {
+    BlazeLayout.render('App_body', { main: 'conocenos' });
+  },
+});
 FlowRouter.route('/portal', {
   name: 'App.portal',
   action() {
@@ -45,5 +53,13 @@ FlowRouter.route('/ingresar', {
   name: 'App.ingresar',
   action() {
     BlazeLayout.render('App_body', { main: 'ingreso' });
+  },
+});
+
+
+FlowRouter.route('/producto', {
+  name: 'App.fabricante',
+  action() {
+    BlazeLayout.render('App_body', { main: 'producto' });
   },
 });

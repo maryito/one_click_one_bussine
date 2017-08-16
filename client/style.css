@@ -325,3 +325,28 @@ span.input-group-addon i {
     padding-top: 6px;
     
 }
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.jumbotron {
+    background-color: #00aaff;
+    color: #000000;
+    padding: 100px 25px;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.logo {
+    font-size: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
