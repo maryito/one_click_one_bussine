@@ -40,4 +40,108 @@
             </div>
         </div>
     </div>
+    {{> Producto}}
+</template>
+
+
+<template name="Producto">
+        <div class="jumbotron text-center">
+        <h2><strong>DETALLE DE PRODUCTO</strong></h2>
+        </div>
+        <img class="img-responsive center-block" src="PC.jpg" alt="Chania">
+        <div class="container">
+            <div class="row">
+                <div class="col border">
+                    <strong>Se encuentra en catalogo desde: </strong>
+                    <script> 
+                        var mydate=new Date(); 
+                        var year=mydate.getYear(); 
+                        if (year < 1000) 
+                        year+=1900; 
+                        var day=mydate.getDay(); 
+                        var month=mydate.getMonth()+1; 
+                        if (month<10) 
+                        month="0"+month; 
+                        var daym=mydate.getDate(); 
+                        if (daym<10) 
+                        daym="0"+daym; 
+                        document.write("<small><font color='000000' face='Arial'><b>"+daym+"/"+month+"/"+year+"</b></font></small>") 
+                    </script>  
+                </div>
+                <div class="col border">
+                    <strong>ID de producto: </strong> DEFINIR
+                </div> 
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col border">
+                    <strong>Categoria: </strong>  DEFINIR
+                </div>
+                <div class="col border">
+                    <strong>Proveedor: </strong> DEFINIR
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col border">
+                <p><strong>Descripcion: </strong> DEFINIR </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col border">
+                    <strong>Incluye: </strong> DEFINIR
+                </div>
+                <div class="col border">
+                    <strong>Precio: </strong> DEFINIR
+                </div>
+            </div>
+        </div>
+        <div class="container text-left">
+            <div class="row">
+                <div class="col-sm-8">
+                </div>
+                <div class="col-sm-4 border">
+                    <strong>Subtotal: </strong> DEFINIR
+                </div>
+            </div>
+        </div>
+        <div class="container text-left">
+            <div class="row">
+                <div class="col-sm-8">
+                </div>
+                <div class="col-sm-4 border">
+                    <strong>I.T.B.M.S: </strong> DEFINIR
+                </div>
+            </div>
+        </div>
+        <div class="container text-left">
+            <div class="row">
+                <div class="col-sm-8">
+                </div>
+                <div class="col-sm-4 border">
+                    <strong>Total: </strong> DEFINIR
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col border">
+                    <strong>Tiempo de entrega estimado: </strong> DEFINIR
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-danger">Rechazar</button>
+                </div>
+                <div class="col text-right">
+                    <button type="button" class="btn btn-success">Confirmar</button>
+                </div>
+            </div>
+        </div>
 </template>
