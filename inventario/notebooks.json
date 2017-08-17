@@ -1,0 +1,268 @@
+[
+  {
+    "id": "as5736z-4799",
+    "categoria": "computadora",
+    "nombre": "as5736z-4799",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core t4500 (2.3ghz/1mb l2/800mhz fsb, i64)",
+      "chipset": "chipset intel® gl40 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "2 gb ram (2048/0) ddriii-667",
+      "almacenamiento": "video intel® graphics media accelerator 4500m",
+      "software": "acer erecovery management, adobe® flash® player 10.1, adobe® reader® 9.1, esobi™, google toolbar™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer) acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 15.6\" hd tft (1366x768) acer cinecrystal™",
+      "dimensiones": "381mm ancho x 253mm largo x 25/34mm altura, 2.6kg",
+      "precio": 500,
+      "imagen": "as5736z-4799.jpg"
+  },
+
+  },
+  {
+    "id": "as4738z-4196",
+    "categoria": "computadora",
+    "nombre": "as4738z-4196",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core p6100 (2.0ghz/3mb l3/1066mhz fsb, i64)",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "3 gb ram (2048/1024) ddriii-667",
+      "almacenamiento": "video intel® graphics hd",
+      "software": "acer erecovery management, adobe® flash® player 10.1, adobe® reader® 9.1, esobi™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer) acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 249mm largo x 28.5/33.5mm altura, 2.2kg",
+      "precio": 456,
+      "imagen": "as4738z-4196.jpg"
+  },
+
+  },
+  {
+    "id": "as4738z-4650",
+    "categoria": "computadora",
+    "nombre": "as4738z-4650",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core p6100 (2.0ghz/3mb l3/1066mhz fsb, i64)",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "3 gb ram (2048/1024) ddriii-667",
+      "almacenamiento": "video intel® graphics hd",
+      "software": "acer erecovery management, adobe® flash® player 10.1, adobe® reader® 9.1, esobi™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer) acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 249mm largo x 28.5/33.5mm altura, 2.2kg",
+      "precio": 762,
+      "imagen": "as4738z-4650.jpg"
+  },
+
+  },
+  {
+    "id": "as4738z-4520",
+    "categoria": "computadora",
+    "nombre": "as4738z-4520",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core p6100 (2.0ghz/3mb l3/1066mhz fsb, i64)",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "3 gb ram (2048/1024) ddriii-667",
+      "almacenamiento": "video intel® graphics hd",
+      "software": "acer erecovery management, adobe® flash® player 10.1, adobe® reader® 9.1, esobi™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer) acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 249mm largo x 28.5/33.5mm altura, 2.2kg",
+      "precio": 500,
+      "imagen": "as4738z-4520.jpg"
+  },
+
+  },
+  {
+    "id": "as4552-3950",
+    "categoria": "computadora",
+    "nombre": "as4552-3950",
+    "detalle":{
+      "procesador": "procesador amd athlon™ ii dual-core mobile p340 (2.2ghz/1mb l2 cache/ 1066 mhz)",
+      "chipset": "chipset amd m880g",
+      "sistema operativo": "windows® 7 home basic 64bit",
+      "memoria": "2 gb ram (2048/0) ddriii-667",
+      "almacenamiento": "video ati radeon™ hd 4250 hasta 256mb (uma)",
+      "software": "acer erecovery management, adobe® flash® player 10.1, adobe® reader® 9.1, esobi™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer) acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 249mm largo x 28.5/33.5mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4552-3950.jpg"
+  },
+
+  },
+  {
+    "id": "as4333-2249",
+    "categoria": "computadora",
+    "nombre": "as4333-2249",
+    "detalle":{
+      "procesador": "procesador intel® celeron® m900 (1 mb l2 cache, 2.2ghz, 800 mhz fsb), i64",
+      "chipset": "chipset intel® gl40 express",
+      "sistema operativo": "windows® 7 starter",
+      "memoria": "1 gb ram (1024/0) ddriii-667",
+      "almacenamiento": "video intel® graphics media accelerator 4500m",
+      "software": "acer erecovery management, adobe® flash® player 10.1, adobe® reader® 9.1, esobi™, google toolbar™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 249mm largo x 28.5/33.5mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4333-2249.jpg"
+  },
+
+  },
+  {
+    "id": "as5742z-4326",
+    "categoria": "computadora",
+    "nombre": "as5742z-4326",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core p6100 (2.0ghz/3mb l3/1066mhz fsb, i64)",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "3 gb ram (2048/1024) ddriii-667",
+      "almacenamiento": "video intel® graphics hd",
+      "software": "acer erecovery management, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google toolbar™, microsoft® office starter 2010, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 15.6\" hd tft (1366x768) acer cinecrystal™ con diseño super-slim",
+      "dimensiones": "381mm ancho x 253mm largo x 25/34mm altura, 2.6kg",
+      "precio": 450,
+      "imagen": "as5742z-4326.jpg"
+  },
+
+  },
+  {
+    "id": "as3820t-5464",
+    "categoria": "computadora",
+    "nombre": "as3820t-5464",
+    "detalle":{
+      "procesador": "procesador intel® core™ i5-460m (2.53 ghz, con turbo boost hasta 2.8 ghz /3mb l3/1066 mhz), i64",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "4 gb ram (2048/2048) ddriii-667",
+      "almacenamiento": "video intel® graphics hd",
+      "software": "acer erecovery management, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google toolbar™, microsoft® office trial (service pack 2), microsoft® works 8.5, norton™ online backup, mcafee® internet security suite 2009 trial, mywinlocker® multimedia, acer arcade™ deluxe, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion con duración de hasta 8 horas. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 13.3\" hd acer cinecrystal™ (1366 x 768), diseño super-slim",
+      "dimensiones": "324mm ancho x 235mm largo x 22/28.9 mm altura, 1.8kg",
+      "precio": 450,
+      "imagen": "as3820t-5464.jpg"
+  },
+
+  },
+  {
+    "id": "as4745z-4297",
+    "categoria": "computadora",
+    "nombre": "as4745z-4297",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core p6100 (2.0ghz/3mb l3/1066mhz fsb, i64)",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "3 gb ram (2048/1024) ddriii-1066",
+      "almacenamiento": "video intel® graphics hd",
+      "software": "acer powersmart manager, acer erecovery management, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google™ setup, google toolbar™, microsoft® office trial (service pack 2), microsoft® works 8.5, norton™ online backup security, mcafee® internet security suite 2009 trial, mcafee® virus, mywinlocker® multimedia, acer arcade™ deluxe, nti media maker™, oberon gamezone acer edition, wildtangent® acer edition, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" tft wxga (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 245mm largo x 25.5/29.87mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4745z-4297.jpg"
+  },
+
+  },
+  {
+    "id": "as4745-7509",
+    "categoria": "computadora",
+    "nombre": "as4745-7509",
+    "detalle":{
+      "procesador": "procesador intel® core™ i3-370m (2.4 ghz/3mb l3/1066 mhz), i64",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "3 gb ram (2048/1024) ddriii-1066",
+      "almacenamiento": "video intel® graphics media accelerator hd",
+      "software": "acer powersmart manager, acer erecovery management, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google™ setup, google toolbar™, microsoft® office trial (service pack 2), microsoft® works 8.5, norton™ online backup security, mcafee® internet security suite 2009 trial, mcafee® virus, mywinlocker® multimedia, acer arcade™ deluxe, nti media maker™, oberon gamezone acer edition, wildtangent® acer edition, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" tft wxga (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 245mm largo x 25.5/29.87mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4745-7509.jpg"
+  },
+
+  },
+  {
+    "id": "as4745-7708",
+    "categoria": "computadora",
+    "nombre": "as4745-7708",
+    "detalle":{
+      "procesador": "procesador intel® core™ i3-370m (2.4 ghz/3mb l3/1066 mhz), i64",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home premium 64bit",
+      "memoria": "4 gb ram (2048/2048) ddriii-1066",
+      "almacenamiento": "video intel® graphics media accelerator hd",
+      "software": "acer powersmart manager, acer erecovery management, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google™ setup, google toolbar™, microsoft® office trial (service pack 2), microsoft® works 8.5, norton™ online backup security, mcafee® internet security suite 2009 trial, mcafee® virus, mywinlocker® multimedia, acer arcade™ deluxe, nti media maker™, oberon gamezone acer edition, wildtangent® acer edition, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" tft wxga (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 245mm largo x 25.5/29.87mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4745-7708.jpg"
+  },
+
+  },
+  {
+    "id": "as4741-5972",
+    "categoria": "computadora",
+    "nombre": "as4741-5972",
+    "detalle":{
+      "procesador": "procesador intel® core™ i3-350m (2.26 ghz/3mb l3/1066 mhz), i64",
+      "chipset": "chipset intel® hm55 express",
+      "sistema operativo": "windows® 7 home basic 64bit",
+      "memoria": "2 gb ram (2048/0) ddriii-667",
+      "almacenamiento": "video intel® graphics hd con 128 mb de memoria dedicada",
+      "software": "acer backup manager, acer epower management, acer erecovery management, microsoft® office trial (service pack 2), microsoft® works, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google toolbar™, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, wildtangent®, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer assist, acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd tft (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 245mm largo x 25.5/31.9mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4741-5972.jpg"
+  },
+
+  },
+  {
+    "id": "as4732z-4747",
+    "categoria": "computadora",
+    "nombre": "as4732z-4747",
+    "detalle":{
+      "procesador": "procesador intel® pentium® dual core t4500 (2.3ghz/1mb l2/800mhz fsb, i64)",
+      "chipset": "chipset intel® gl40 express",
+      "sistema operativo": "windows® 7 starter",
+      "memoria": "2 gb ram (1024/1024) ddrii-667",
+      "almacenamiento": "video intel® graphics media accelerator 4500m (dvmt 5.0)",
+      "software": "acer arcade™ deluxe featuring acer cinemavision™ and acer clearvision™ technologies, acer crystal eye, acer gridvista™, acer launch manager, acer erecovery management, acer epower management, adobe flash® player, adobe® reader®, esobi™, google toolbar™, mcafee® internet security suite trial, microsoft® works with office home and student 2007 trial (service pack 1), mywinlocker®, norton™ online backup, nti media maker™, windows live™ essentials",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" tft wxga (1366x768) acer cinecrystal™",
+      "dimensiones": "337mm ancho x 227mm largo x 26/39.9mm altura, 2.4kg",
+      "precio": 450,
+      "imagen": "as4732z-4747.jpg"
+  },
+
+  },
+  {
+    "id": "as4251-1529",
+    "categoria": "computadora",
+    "nombre": "as4251-1529",
+    "detalle":{
+      "procesador": "procesador amd v series v120 (2.20ghz/512kb l2 cache, 1066 mhz fsb)",
+      "chipset": "chipset amd m880g",
+      "sistema operativo": "windows® 7 starter",
+      "memoria": "2 gb ram (2048/0) ddriii-667",
+      "almacenamiento": "video ati radeon™ hd 4250 hasta 256mb (uma)",
+      "software": "acer erecovery management, microsoft® office trial (service pack 2), microsoft® works 8.5, adobe® flash® player 10, adobe® reader® 9.1, esobi™, google toolbar™, norton™ online backup, mcafee® internet security suite trial, mywinlocker®, cyberlink® powerdvd™, nti media maker™, oberon gamezone, acer crystal eye, microsoft® silverlight™, skype™, windows live™ essentials — wave 3.2 (mail, photo gallery, live™ messenger, movie maker, writer), acer identity card, acer registration, acer updater, ebay® shortcut 2009",
+      "bateria": "batería 6 celdas li-ion. adaptador de corriente ac de 65w",
+      "pantalla": "pantalla de 14\" hd tft (1366x768) acer cinecrystal™",
+      "dimensiones": "342mm ancho x 245mm largo x 25.5/31.9mm altura, 2.2kg",
+      "precio": 450,
+      "imagen": "as4251-1529.jpg"
+  }
+
+  },
+]
