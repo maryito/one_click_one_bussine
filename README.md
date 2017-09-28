@@ -1,20 +1,21 @@
 #  One Click One Business 
-![](https://github.com/maryito/Inventario_inteligente/blob/master/public/img/logo%20peque%C3%B1o.jpeg)
 ## **Plataforma de inventarios autónomo con la integración de proveedores y empresas, manejado a través del portal en tiempo real y multiplataforma.**
+
+![logo](https://github.com/maryito/Inventario_inteligente/blob/master/public/img/logo%20peque%C3%B1o.jpeg)
 
 ### Desarrollada en Meteorjs
 ### [Instalación](https://github.com/maryito/one_click_one_bussine-plataforma/blob/master/INSTALACION.md)
 
-## Vista principal del portal del inventario inteligente
+## portal del inventario inteligente
 ![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/principal.PNG)
 
-## Vista de Inventario
+## Inventario
 ![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/Proveedor%20-%20Inventario.png)
 
-## Vista de Productos
+## Productos
 ![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/Proveedor%20-%20Productos.png)
 
-## Vista de Órdenes
+## Órdenes
 ![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/Proveedor%20-%20%C3%93rdenes.png)
 
 ### [Mas información](https://github.com/maryito/one_click_one_bussine-plataforma/wiki)
