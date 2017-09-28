@@ -1,49 +1,26 @@
 #  One Click One Business 
+![](https://github.com/maryito/Inventario_inteligente/blob/master/public/img/logo%20peque%C3%B1o.jpeg)
+## **Plataforma de inventarios autónomo con la integración de proveedores y empresas, manejado a través del portal en tiempo real y multiplataforma.**
 
-Plataforma de inventarios autónomo con la integración de fabricantes, proveedores y empresas. Manejado a través del portal en tiempo real y multiplataforma. 
+### Desarrollada en Meteorjs
+### [Instalación](https://github.com/maryito/one_click_one_bussine-plataforma/blob/master/INSTALACION.md)
 
-### Información
+## Vista principal del portal del inventario inteligente
+![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/principal.PNG)
 
-**ATENCIO!** Todos los documentos que desee subir guardarlos en la carpeta [private]
+## Vista de Inventario
+![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/Proveedor%20-%20Inventario.png)
 
-_**Nota:**_ Descargar git en su maquina para clonar el proyecto y instalar [Meteor](https://www.meteor.com/install).
+## Vista de Productos
+![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/Proveedor%20-%20Productos.png)
 
-Para ejecutar el **proyecto** luego de clonarlo, Para bajara todas las depencia del proyecto:
-```
-meteor npm install 
-```
+## Vista de Órdenes
+![](https://github.com/maryito/Inventario_inteligente/blob/master/private/Pantallas/Proveedor%20-%20%C3%93rdenes.png)
 
-Para inicar el proyecto 
-```
-meteor
-```
-
-### Subir cambios al repositorio 
-```
-git add . 
-git commit
-git push
-```
-### Actualizar los nuevo cambios del repositorio
-```git pull ```
-### Crear una rama
-```git checkout -b nombre_de_la_rama```
-### cambiar de rama
-```git checkout nombre_de_la_rama```
-### Eliminar una rama 
-```git branch -d nombre_de_la_rama```
-
-[x]*Como ejecutar la web de inventario proveedor
-Se Cambiaría a la rama inventarios
-``` 
-git checkout inventarios 
-meteor --port 4000
-```
-
-# DESARROLLADO
+### [Mas información](https://github.com/maryito/one_click_one_bussine-plataforma/wiki)
 ## Colaboradores
-**Equipo de Sistema Dinánimos:**
-* [Maryon Jose Torres Rodriguez](https://github.com/maryito) 
+
+* **Maryon Torres** https://github.com/maryito
 * **Alberto Wen** https://github.com/LordEN15
 * **Michael Abril** https://github.com/Michaelabril
 * **Yelitza Medina** https://github.com/YeliMedina
@@ -58,7 +35,3 @@ meteor --port 4000
 * **Iván Hidalgo** https://github.com/ihidalgo
 * **Christopher Rodriguez** https://github.com/Cliofen01
 * **Paula Cayama** https://github.com/paulacayama
-
-
-# Lincencia
-MIT 
