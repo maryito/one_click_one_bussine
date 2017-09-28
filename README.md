@@ -1,4 +1,4 @@
-# Inventario inteligente
+#  One Click One Business 
 
 Plataforma de inventarios autónomo con la integración de fabricantes, proveedores y empresas. Manejado a través del portal en tiempo real y multiplataforma. 
 
